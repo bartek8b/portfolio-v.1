@@ -5,11 +5,6 @@ body{
     border: 0;
     font-family: sans-serif;
     background-color: grey;
-    background-image: url(backgroundpic.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
 }
 #container{
     border:  0px solid;;
@@ -18,7 +13,6 @@ body{
     width: 100vw;
     align-items: center;
     justify-content: center; 
-
 }
 div{
     display: flex;
