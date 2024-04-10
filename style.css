@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    border: 0;
+    font-family: sans-serif;
+    background-color: grey;
+    background-image: url(backgroundpic.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#container{
+    border:  0px solid;;
+    display: flex;
+    height: 65vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center; 
+
+}
+div{
+    display: flex;
+    border: 2px solid black;
+    float: left;
+    font-size: 1.8em;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+#b{
+    background-color: white;
+    color: black;
+    animation-name: slideRight;
+    animation-duration: 3s;
+}
+#com{
+    background-color: black;
+    color: white;
+    animation-name: slideLeft;
+    animation-duration: 4s;
+}
+p{
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+}
+@keyframes slideRight{
+    from{transform: translateX(-100%)}
+}
+@keyframes slideLeft{
+    from{transform: translateX(100%)}
+}
+@keyframes slideDown{
+    from{transform: translateY(-75%)}
+}
+@keyframes slideUp{
+    from{transform: translateY(75%)}
+}
+
+
+@media (max-width: 600px) {
+    #b{
+        animation-name: slideDown;
+        animation-duration: 3s;}
+    #com{
+        animation-name: slideUp;
+        animation-duration: 4s;}
+}
