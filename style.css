@@ -7,10 +7,10 @@ body{
     background-color: grey;
 }
 #container{
-    border:  0px solid;;
+    border: 0px;
     display: flex;
     height: 65vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center; 
 }
@@ -18,7 +18,7 @@ div{
     display: flex;
     border: 2px solid black;
     float: left;
-    font-size: 1.8em;
+    font-size: 1.7em;
     height: 200px;
     width: 200px;
     align-items: center;
