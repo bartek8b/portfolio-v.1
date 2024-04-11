@@ -7,7 +7,7 @@ body{
     background-color: grey;
     background-image: url(images/background.jpg);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
 	background-attachment: fixed;
 	background-size: cover;
 }
