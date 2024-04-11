@@ -5,6 +5,11 @@ body{
     border: 0;
     font-family: sans-serif;
     background-color: grey;
+    background-image: url(images/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 #container{
     border: 0px;
@@ -28,13 +33,13 @@ div{
     background-color: white;
     color: black;
     animation-name: slideRight;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 #com{
     background-color: black;
     color: white;
     animation-name: slideLeft;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 p{
     text-align: center;
@@ -42,10 +47,10 @@ p{
     color: white;
 }
 @keyframes slideRight{
-    from{transform: translateX(-100%)}
+    from{transform: translateX(-75%)}
 }
 @keyframes slideLeft{
-    from{transform: translateX(100%)}
+    from{transform: translateX(75%)}
 }
 @keyframes slideDown{
     from{transform: translateY(-75%)}
