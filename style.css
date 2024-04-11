@@ -4,11 +4,7 @@
 body{
     border: 0;
     font-family: sans-serif;
-    background-image: url(images/background.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
+    background-color: hsl(0, 0%, 50%);
 }
 #container{
     border: 0px;
