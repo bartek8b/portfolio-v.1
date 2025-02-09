@@ -8,8 +8,7 @@
 }
 :root {
 	/* color-scheme: light dark; */
-	--backgroundColor: hsl(0, 0%, 75%);
-	--backgroundColorContainer: hsl(0, 0%, 85%);
+	--backgroundColor: hsl(0, 0%, 85%);
 	--fontColor: hsl(0, 0%, 20%);
 	--warmColor: hsl(50, 100%, 35%);
 	--coldColor: hsl(120, 40%, 30%);
@@ -32,7 +31,7 @@ footer {
 	border-radius: 0.5rem;
 	display: flex;
 	padding: 0.5rem;
-	background-color: var(--backgroundColorContainer);
+	background-color: var(--backgroundColor);
 }
 header {
 	justify-content: right;
@@ -101,7 +100,7 @@ main {
 	padding: 2rem;
 	height: 100%;
 	width: 100%;
-	background-color: var(--backgroundColorContainer);
+	background-color: var(--backgroundColor);
 }
 #presentation {
 	grid-area: presentation;
@@ -132,8 +131,7 @@ h1{
 }
 /* -------------------- DARK COLOR SCHEME -------------------- */
 [data-theme="dark"] {
-	--backgroundColor: hsl(0, 0%, 15%);
-	--backgroundColorContainer: hsl(0, 0%, 25%);
+	--backgroundColor: hsl(0, 0%, 25%);
 	--fontColor: hsl(0, 0%, 80%);
 	
 	header, footer, .grid-items {
