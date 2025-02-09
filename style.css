@@ -8,7 +8,7 @@
 }
 :root {
 	/* color-scheme: light dark; */
-	--backgroundColor: hsl(0, 0%, 85%);
+	--backgroundColor: hsl(0, 0%, 80%);
 	--fontColor: hsl(0, 0%, 20%);
 	--warmColor: hsl(50, 100%, 35%);
 	--coldColor: hsl(120, 40%, 30%);
@@ -27,8 +27,6 @@ body {
 }
 header,
 footer {
-	border: 3px solid var(--coldColor);
-	border-radius: 0.5rem;
 	display: flex;
 	padding: 0.5rem;
 	background-color: var(--backgroundColor);
@@ -80,7 +78,8 @@ footer {
 	display: none;
 }
 main {
-	padding: 1rem;
+	padding-block: 1rem;
+	padding-inline: 10rem;
 	flex: 1;
 	display: grid;
 	grid-gap: 1rem;
@@ -92,7 +91,6 @@ main {
 		"tools-caption	tools-display	tools-display";
 }
 .grid-items {
-	border: 3px solid var(--coldColor);
 	border-radius: 0.5rem;
 	display: flex;
 	justify-content: center;
@@ -101,6 +99,7 @@ main {
 	height: 100%;
 	width: 100%;
 	background-color: var(--backgroundColor);
+	box-shadow: 3px 3px 5px var(--warmColor);
 }
 #presentation {
 	grid-area: presentation;
@@ -112,6 +111,7 @@ h1{
 	grid-area: photo;
 }
 #photo img{
+	display: block;
 	max-width: 10rem;
 	filter: invert(15%);
 	border-radius: 100rem;
@@ -134,8 +134,9 @@ h1{
 	--backgroundColor: hsl(0, 0%, 25%);
 	--fontColor: hsl(0, 0%, 80%);
 	
-	header, footer, .grid-items {
-		border: 3px solid var(--warmColor)}
+	/* .grid-items{
+		box-shadow: 5px 5px 10px var(--coldColor);
+	} */
 	#photo img{
 		filter: invert(80%);
 	}
@@ -146,7 +147,7 @@ h1{
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (width <= 768px) {
 	main {
-		padding: 1rem;
+		padding-inline: 1rem;
 		grid-gap: 1rem;
 		grid-template-rows: auto;
 		grid-template-columns: auto;
@@ -159,5 +160,8 @@ h1{
 			"tools-display";
 	}
 }
-/* @media (width <= 768px) {
-} */
+@media (768px < width <= 1024px) {
+	main {
+		padding-inline: 5rem;
+	}
+}
