@@ -18,7 +18,8 @@ body {
 	/* background-color: var(--backgroundColor); */
 	color: var(--fontColor);
 	scroll-behavior: smooth;
-	background-image: url(images/background.jpg);
+	background: url(images/background.jpg) no-repeat center center;
+	background-size: cover;
 }
 #body-container {
 	display: flex;
@@ -95,11 +96,17 @@ main {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	padding: 2rem;
 	height: 100%;
 	width: 100%;
 	background-color: var(--backgroundColor);
 	box-shadow: 3px 3px 5px var(--warmColor);
+}
+.big-content{
+	padding: 5rem;
+}
+.small-content{
+	padding: 2rem;
+	align-items: center;
 }
 #presentation {
 	grid-area: presentation;
