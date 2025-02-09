@@ -1,65 +1,166 @@
-*{
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	text-wrap: balance;
 }
-body{
-    border: 0;
-    font-family: sans-serif;
-    background-color: hsl(0, 0%, 50%);
+:root {
+	/* color-scheme: light dark; */
+	--backgroundColor: hsl(0, 0%, 75%);
+	--backgroundColorContainer: hsl(0, 0%, 85%);
+	--fontColor: hsl(0, 0%, 20%);
+	--warmColor: hsl(50, 100%, 35%);
+	--coldColor: hsl(120, 40%, 30%);
 }
-#container{
-    border: 0px;
-    display: flex;
-    height: 65vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center; 
+body {
+	font-family: "Lato", "Open Sans", Helvetica, sans-serif;
+	/* background-color: var(--backgroundColor); */
+	color: var(--fontColor);
+	scroll-behavior: smooth;
+	background-image: url(images/background.jpg);
 }
-div{
-    display: flex;
-    border: 2px solid black;
-    float: left;
-    font-size: 1.7em;
-    height: 200px;
-    width: 200px;
-    align-items: center;
-    justify-content: center;
+#body-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+	opacity: 90%;
 }
-#b{
-    background-color: white;
-    color: black;
-    animation-name: slideRight;
-    animation-duration: 2s;
+header,
+footer {
+	border: 3px solid var(--coldColor);
+	border-radius: 0.5rem;
+	display: flex;
+	padding: 0.5rem;
+	background-color: var(--backgroundColorContainer);
 }
-#com{
-    background-color: black;
-    color: white;
-    animation-name: slideLeft;
-    animation-duration: 3s;
+header {
+	justify-content: right;
 }
-p{
-    text-align: center;
-    font-size: 1.5em;
-    color: white;
+footer {
+	justify-content: left;
 }
-@keyframes slideRight{
-    from{transform: translateX(-75%)}
+#toggleThemeContainer {
+	display: flex;
+	width: fit-content;
 }
-@keyframes slideLeft{
-    from{transform: translateX(75%)}
+#toggleThemeButton {
+	border: 1px solid var(--fontColor);
+	background-color: var(--backgroundColor);
+	color: var(--warmColor);
+	width: 4rem;
+	height: 2rem;
+	border-radius: 3rem;
+	cursor: pointer;
+	position: relative;
+	transition: 0.3s;
+	transform: scale(80%);
 }
-@keyframes slideDown{
-    from{transform: translateY(-75%)}
+#toggleThemeButton::before {
+	position: absolute;
+	content: "\2600";
+	font-size: 1rem;
+	align-content: center;
+	text-align: center;
+	background-color: var(--coldColor);
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 3rem;
+	margin: 0.1rem;
+	transition: 0.3s;
 }
-@keyframes slideUp{
-    from{transform: translateY(75%)}
+#toggleTheme:checked + #toggleThemeButton {
+	border: 1px solid var(--fontColor);
+	background-color: var(--backgroundColor);
 }
-
-
-@media (max-width: 600px) {
-    #b{
-        animation-name: slideDown;
-        animation-duration: 3s;}
-    #com{
-        animation-name: slideUp;
-        animation-duration: 4s;}
+#toggleTheme:checked + #toggleThemeButton::before {
+	transform: translateX(125%);
+	content: "\263E";
 }
+#toggleTheme {
+	display: none;
+}
+main {
+	padding: 1rem;
+	flex: 1;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		"presentation	presentation	photo"
+		"implementations-caption	implementations-display	implementations-display"
+		"tools-caption	tools-display	tools-display";
+}
+.grid-items {
+	border: 3px solid var(--coldColor);
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2rem;
+	height: 100%;
+	width: 100%;
+	background-color: var(--backgroundColorContainer);
+}
+#presentation {
+	grid-area: presentation;
+}
+h1{
+	color: var(--coldColor);
+}
+#photo {
+	grid-area: photo;
+}
+#photo img{
+	max-width: 10rem;
+	filter: invert(15%);
+	border-radius: 100rem;
+	align-self: center;
+}
+#implementations-caption {
+	grid-area: implementations-caption;
+}
+#implementations-display {
+	grid-area: implementations-display;
+}
+#tools-caption {
+	grid-area: tools-caption;
+}
+#tools-display {
+	grid-area: tools-display;
+}
+/* -------------------- DARK COLOR SCHEME -------------------- */
+[data-theme="dark"] {
+	--backgroundColor: hsl(0, 0%, 15%);
+	--backgroundColorContainer: hsl(0, 0%, 25%);
+	--fontColor: hsl(0, 0%, 80%);
+	
+	header, footer, .grid-items {
+		border: 3px solid var(--warmColor)}
+	#photo img{
+		filter: invert(80%);
+	}
+	h1{
+		color: var(--warmColor);
+	}
+}
+/* -------------------- MEDIA QUERIES -------------------- */
+@media (width <= 768px) {
+	main {
+		padding: 1rem;
+		grid-gap: 1rem;
+		grid-template-rows: auto;
+		grid-template-columns: auto;
+		grid-template-areas:
+			"presentation"
+			"photo"
+			"implementations-caption"
+			"implementations-display"
+			"tools-caption"
+			"tools-display";
+	}
+}
+/* @media (width <= 768px) {
+} */
