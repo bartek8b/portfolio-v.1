@@ -4,22 +4,26 @@
 	margin: 0;
 	padding: 0;
 	-webkit-tap-highlight-color: transparent;
-	text-wrap: balance;
+}
+*::selection {
+	background-color: var(--coldColor);
+	color: var(--backgroundColor);
 }
 :root {
-	/* color-scheme: light dark; */
-	--backgroundColor: hsl(0, 0%, 80%);
-	--fontColor: hsl(0, 0%, 20%);
-	--warmColor: hsl(50, 100%, 35%);
+	color-scheme: light dark;
+	--backgroundColor: hsl(0, 0%, 90%);
+	--fontColor: hsl(0, 0%, 10%);
+	--warmColor: hsl(50, 100%, 40%);
 	--coldColor: hsl(120, 40%, 30%);
 }
 body {
 	font-family: "Lato", "Open Sans", Helvetica, sans-serif;
-	/* background-color: var(--backgroundColor); */
+	background-color: var(--backgroundColor);
 	color: var(--fontColor);
 	scroll-behavior: smooth;
-	background: url(images/background.jpg) no-repeat center center;
+	background: url(images/background_light.jpg) no-repeat center center;
 	background-size: cover;
+	text-wrap: balance;
 }
 #body-container {
 	display: flex;
@@ -31,6 +35,7 @@ footer {
 	display: flex;
 	padding: 0.5rem;
 	background-color: var(--backgroundColor);
+	backdrop-filter: blur(50px);
 }
 header {
 	justify-content: right;
@@ -80,16 +85,16 @@ footer {
 }
 main {
 	padding-block: 1rem;
-	padding-inline: 10rem;
+	padding-inline: 10vw;
 	flex: 1;
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas:
-		"presentation	presentation	photo"
-		"implementations-caption	implementations-display	implementations-display"
-		"tools-caption	tools-display	tools-display";
+		"presentation	presentation	presentation	photo"
+		"implementations-caption	implementations-display	implementations-display	implementations-display"
+		"tools-caption	tools-display	tools-display	tools-display";
 }
 .grid-items {
 	border-radius: 0.5rem;
@@ -120,7 +125,7 @@ h1{
 #photo img{
 	display: block;
 	max-width: 10rem;
-	filter: invert(15%);
+	filter: invert(10%);
 	border-radius: 100rem;
 	align-self: center;
 }
@@ -139,36 +144,50 @@ h1{
 /* -------------------- DARK COLOR SCHEME -------------------- */
 [data-theme="dark"] {
 	--backgroundColor: hsl(0, 0%, 25%);
-	--fontColor: hsl(0, 0%, 80%);
+	--fontColor: hsl(0, 0%, 90%);
+
+	body{
+		background: url(images/background.jpg);
+		*::selection {
+			background-color: var(--warmColor);
+			color: var(--fontColor);
+		}
+	}
 	
-	/* .grid-items{
-		box-shadow: 5px 5px 10px var(--coldColor);
-	} */
 	#photo img{
-		filter: invert(80%);
+		filter: invert(75%);
 	}
 	h1{
 		color: var(--warmColor);
 	}
+
+	
 }
 /* -------------------- MEDIA QUERIES -------------------- */
+@media (768px < width <= 1024px) {
+	main {
+		padding-inline: 8vw;
+}
+	.big-content{
+		padding: 4rem;
+	}
+
+}
 @media (width <= 768px) {
 	main {
-		padding-inline: 1rem;
-		grid-gap: 1rem;
-		grid-template-rows: auto;
+		padding-inline: 3vw;
+		grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
 		grid-template-columns: auto;
 		grid-template-areas:
-			"presentation"
 			"photo"
+			"presentation"
 			"implementations-caption"
 			"implementations-display"
 			"tools-caption"
 			"tools-display";
 	}
-}
-@media (768px < width <= 1024px) {
-	main {
-		padding-inline: 5rem;
+	.big-content{
+		padding: 3rem;
 	}
 }
+
