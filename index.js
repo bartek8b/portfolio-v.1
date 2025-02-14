@@ -31,3 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	checkbox.addEventListener("change", handleToggleChange);
 });
 themeDark.addEventListener("change", handleColorScheme);
+
+// ANIMATION ON SCROLL
+
+const items = document.querySelectorAll(".grid-items");
+
+const observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add("visible");
+			observer.unobserve(entry.target);
+		}
+	});
+});
+
+items.forEach(item => {
+	observer.observe(item);
+})
