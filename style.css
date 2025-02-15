@@ -128,6 +128,17 @@ main {
 .big-content{
 	padding: 5rem;
 }
+#tools-display div img{
+	max-height: 200px;
+	filter: invert(15%);
+}
+.tools-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	scroll-snap-align: start;
+	flex: 0 0 60%;
+}
 .small-content{
 	padding: 2rem;
 	align-items: center;
@@ -159,6 +170,12 @@ h1{
 }
 #tools-display {
 	grid-area: tools-display;
+	overflow-x:scroll;
+	flex-direction: row;
+	justify-content: left;
+	scroll-snap-type: x mandatory;
+	scroll-padding: 0;
+	gap: 0x;
 }
 #services-caption {
 	grid-area: services-caption;
@@ -193,6 +210,10 @@ h1{
 		color: var(--warmColor);
 	}
 
+	#tools-display div img{
+		filter: invert(85%);
+	}	
+
 	
 }
 /* -------------------- MEDIA QUERIES -------------------- */
@@ -222,6 +243,9 @@ h1{
 	}
 	.big-content{
 		padding: 3rem;
+	}
+	.tools-item{
+		min-width: 120%;
 	}
 }
 
