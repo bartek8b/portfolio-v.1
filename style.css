@@ -138,7 +138,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	scroll-snap-align: start;
-	flex: 0 0 60%;
+	flex: 0 0 62%;
 }
 .small-content{
 	padding: 2rem;
@@ -173,10 +173,10 @@ h1{
 	grid-area: tools-display;
 	overflow-x:scroll;
 	flex-direction: row;
-	justify-content: left;
+	justify-content: space-between;
 	scroll-snap-type: x mandatory;
 	scroll-padding: 0;
-	gap: 0x;
+	gap: 0;
 }
 #services-caption {
 	grid-area: services-caption;
