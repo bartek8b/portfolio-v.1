@@ -139,7 +139,6 @@ main {
 	justify-content: center;
 	scroll-snap-align: start;
 	flex: 0 0 60%;
-	border: 2px solid red;
 }
 .small-content{
 	padding: 2rem;
@@ -247,7 +246,7 @@ h1{
 		padding: 3rem;
 	}
 	.tools-item{
-		min-width: 120%;
+		flex: 0 0 120%;
 	}
 }
 
