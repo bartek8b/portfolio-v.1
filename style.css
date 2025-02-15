@@ -264,7 +264,7 @@ h1{
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (768px < width <= 1024px) {
 	main {
-		padding-inline: 8vw;
+		padding-inline: 5vw;
 }
 	.big-content{
 		padding: 4rem;
