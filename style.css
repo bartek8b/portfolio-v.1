@@ -44,7 +44,7 @@ header {
 	position: sticky;
 	top: 0px;
 	z-index: 1;
-	transition: top 0.5s;
+	transition: top 0.3s;
 }
 footer {
 	justify-content: left;
