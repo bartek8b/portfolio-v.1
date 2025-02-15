@@ -274,7 +274,7 @@ h1{
 @media (width <= 768px) {
 	main {
 		padding-inline: 3vw;
-		grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+		grid-template-rows: auto 2fr auto 2fr auto 2fr auto 2fr;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
 			".	photo"
