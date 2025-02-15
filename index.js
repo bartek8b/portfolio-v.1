@@ -48,3 +48,22 @@ const observer = new IntersectionObserver(entries => {
 items.forEach(item => {
 	observer.observe(item);
 })
+
+document.getElementsByTagName
+
+// HEADER VISIBLE ON SCROLL
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+	let header = document.getElementById("header");
+	let scrollToTop = window.pageYOffset || document.documentElement.scrollTop;
+
+	if(scrollToTop > lastScrollTop){
+		header.style.top = "-100%";
+	}
+	else{
+		header.style.top = "0";
+	}
+	lastScrollTop = scrollToTop;
+})
