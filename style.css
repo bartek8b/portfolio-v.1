@@ -284,5 +284,8 @@ h1{
 	.tools-item, .portfolio-item{
 		flex: 0 0 120%;
 	}
+	#portfolio-display div img{
+		max-width: 400px;
+	}
 }
 
