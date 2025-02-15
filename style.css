@@ -272,16 +272,16 @@ h1{
 	main {
 		padding-inline: 3vw;
 		grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
-			".	.	photo"
-			"presentation presentation presentation"
-			"portfolio-caption	.	."
-			"portfolio-display portfolio-display portfolio-display"
-			".	.	services-caption"
-			"services-display	services-display	services-display"
-			"tools-caption	.	."
-			"tools-display	tools-display	tools-display";
+			".	photo"
+			"presentation presentation"
+			"portfolio-caption	."
+			"portfolio-display portfolio-display"
+			".	services-caption"
+			"services-display	services-display"
+			"tools-caption	."
+			"tools-display	tools-display";
 	}
 	.big-content{
 		padding: 3rem;
