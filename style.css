@@ -21,10 +21,10 @@ body {
 	font-size: 1.3rem;
 	background-color: var(--backgroundColor);
 	color: var(--fontColor);
-	scroll-behavior: smooth;
 	background: url(images/background_light.jpg) no-repeat center center;
 	background-size: cover;
 	text-wrap: balance;
+	scroll-behavior: smooth;
 }
 #body-container {
 	display: flex;
@@ -184,6 +184,22 @@ h1{
 #services-display {
 	grid-area: services-display;
 }
+/* -------------------- SCROLL -------------------- */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb {
+	background: var(--coldColor);
+	border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: var(--backgroundColor);
+  }
+
 /* -------------------- DARK COLOR SCHEME -------------------- */
 [data-theme="dark"] {
 	--backgroundColor: hsl(0, 0%, 25%);
