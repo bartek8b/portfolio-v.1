@@ -45,9 +45,11 @@ header {
 	top: 0px;
 	z-index: 1;
 	transition: top 0.3s;
+	border-bottom: 1px solid var(--fontColor);
 }
 footer {
 	justify-content: left;
+	border-top: 1px solid var(--fontColor);
 }
 #logo-header{
 	max-height: 30px;
