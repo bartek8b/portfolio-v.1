@@ -18,6 +18,7 @@
 }
 body {
 	font-family: "Lato", "Open Sans", Helvetica, sans-serif;
+	font-size: 1.3rem;
 	background-color: var(--backgroundColor);
 	color: var(--fontColor);
 	scroll-behavior: smooth;
@@ -38,10 +39,18 @@ footer {
 	backdrop-filter: blur(50px);
 }
 header {
-	justify-content: right;
+	justify-content: space-between;
+	padding-inline: 3%;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
 }
 footer {
 	justify-content: left;
+}
+#logo-header{
+	max-height: 30px;
+	filter: invert(10%);
 }
 #toggleThemeContainer {
 	display: flex;
@@ -89,18 +98,20 @@ main {
 	flex: 1;
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas:
 		"presentation	presentation	presentation	photo"
 		"implementations-caption	implementations-display	implementations-display	implementations-display"
+		"services-display	services-display	services-display	services-caption"
 		"tools-caption	tools-display	tools-display	tools-display";
 }
 .grid-items {
 	position: relative;
 	opacity: 0;
 	transform: translateY(25%);
-	transition: opacity 1s, transform 1s;
+	zoom: 0.8;
+	transition: opacity 0.5s, transform 0.5s linear;
 	border-radius: 0.5rem;
 	display: flex;
 	justify-content: center;
@@ -149,6 +160,12 @@ h1{
 #tools-display {
 	grid-area: tools-display;
 }
+#services-caption {
+	grid-area: services-caption;
+}
+#services-display {
+	grid-area: services-display;
+}
 /* -------------------- DARK COLOR SCHEME -------------------- */
 [data-theme="dark"] {
 	--backgroundColor: hsl(0, 0%, 25%);
@@ -160,6 +177,12 @@ h1{
 		*::selection {
 			background-color: var(--warmColor);
 			color: var(--fontColor);
+		}
+		#logo-header{
+			filter: invert(75%);
+		}
+		.grid-items {
+			box-shadow: 3px 3px 5px var(--coldColor);
 		}
 	}
 	
@@ -185,13 +208,15 @@ h1{
 @media (width <= 768px) {
 	main {
 		padding-inline: 3vw;
-		grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
+		grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
 		grid-template-columns: auto;
 		grid-template-areas:
 			"photo"
 			"presentation"
 			"implementations-caption"
 			"implementations-display"
+			"services-caption"
+			"services-display"
 			"tools-caption"
 			"tools-display";
 	}
