@@ -125,7 +125,6 @@ main {
 	transition: opacity 0.5s, transform 0.5s linear;
 	border-radius: 0.5rem;
 	display: flex;
-	justify-content: space-evenly;
 	flex-direction: column;
 	height: 100%;
 	width: 100%;
@@ -138,11 +137,14 @@ main {
 }
 .big-content{
 	padding: 5rem;
+	justify-content: space-evenly;
 }
 .small-content{
 	padding: 2rem;
 	align-items: center;
+	justify-content: center;
 	scale: 90%;
+	aspect-ratio: 1 / 1;
 }
 #presentation {
 	grid-area: presentation;
@@ -158,8 +160,8 @@ h1{
 	display: block;
 	max-width: 10rem;
 	filter: invert(10%);
-	border-radius: 100rem;
 	align-self: center;
+	
 }
 #portfolio-caption {
 	grid-area: portfolio-caption;
@@ -280,22 +282,28 @@ h1{
 	main {
 		padding-inline: 3vw;
 		grid-template-rows: 10fr auto 1fr repeat(2, auto 10fr 1fr) auto 10fr;
-		grid-template-columns: auto;
+		grid-template-columns: 1fr 2fr 1fr;
 		grid-template-areas:			
 			"presentation presentation	presentation"
-			".	.	photo"
+			".	photo	."
 			".	.	."
-			"portfolio-caption	.	."
+			".	portfolio-caption	."
 			"portfolio-display portfolio-display	portfolio-display"
 			".	.	."
-			".	.	services-caption"
+			".	services-caption	."
 			"services-display	services-display	services-display"
 			".	.	."
-			"tools-caption	.	."
+			".	tools-caption	."
 			"tools-display	tools-display	tools-display";
 	}
 	.big-content{
 		padding: 3rem;
+	}
+	.small-content{
+		aspect-ratio: 3 / 1;
+	}
+	#photo {
+		aspect-ratio: 1 / 1;
 	}
 	.tools-item, .portfolio-item{
 		flex: 0 0 120%;
