@@ -101,17 +101,21 @@ main {
 	flex: 1;
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-rows: repeat(8, 1fr);
+	grid-template-rows: repeat(4, 5fr 5fr 1fr);
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas:
 		"presentation	presentation	presentation	photo"
 		"presentation	presentation	presentation	."
+		".	.	.	."
 		"portfolio-caption	portfolio-display	portfolio-display	portfolio-display"
 		".	portfolio-display	portfolio-display	portfolio-display"
+		".	.	.	."
 		"services-display	services-display	services-display	services-caption"
 		"services-display	services-display	services-display	."
+		".	.	.	."
 		"tools-caption	tools-display	tools-display	tools-display"
-		".	tools-display	tools-display	tools-display";
+		".	tools-display	tools-display	tools-display"
+		".	.	.	.";
 }
 .grid-items {
 	position: relative;
@@ -274,17 +278,21 @@ h1{
 @media (width <= 768px) {
 	main {
 		padding-inline: 3vw;
-		grid-template-rows: auto 2fr auto 2fr auto 2fr auto 2fr;
+		grid-template-rows: repeat(4, auto 10fr 1fr);
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
 			".	photo"
 			"presentation presentation"
+			".	."
 			"portfolio-caption	."
 			"portfolio-display portfolio-display"
+			".	."
 			".	services-caption"
 			"services-display	services-display"
+			".	."
 			"tools-caption	."
-			"tools-display	tools-display";
+			"tools-display	tools-display"
+			".	.";
 	}
 	.big-content{
 		padding: 3rem;
