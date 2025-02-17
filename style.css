@@ -101,21 +101,21 @@ main {
 	flex: 1;
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-rows: repeat(4, 5fr 5fr 1fr);
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr 1fr 75px) 1fr 1fr;
+	grid-template-columns: repeat(5, 1fr);
 	grid-template-areas:
-		"presentation	presentation	presentation	photo"
-		"presentation	presentation	presentation	."
-		".	.	.	."
-		"portfolio-caption	portfolio-display	portfolio-display	portfolio-display"
-		".	portfolio-display	portfolio-display	portfolio-display"
-		".	.	.	."
-		"services-display	services-display	services-display	services-caption"
-		"services-display	services-display	services-display	."
-		".	.	.	."
-		"tools-caption	tools-display	tools-display	tools-display"
-		".	tools-display	tools-display	tools-display"
-		".	.	.	.";
+		"presentation	presentation	 presentation	presentation	photo"
+		"presentation	presentation	presentation	presentation	."
+		".	.	.	.	."
+		"portfolio-caption	portfolio-display	portfolio-display	portfolio-display	portfolio-display"
+		".	portfolio-display	portfolio-display	portfolio-display	portfolio-display"
+		".	.	.	.	."
+		"services-display	services-display	services-display	services-display	services-caption"
+		"services-display	services-display	services-display	services-display	."
+		".	.	.	.	."
+		"tools-caption	tools-display	tools-display	tools-display	tools-display"
+		".	tools-display	tools-display	tools-display	tools-display"
+		".	.	.	.	.";
 }
 .grid-items {
 	position: relative;
@@ -184,7 +184,7 @@ h1{
 	flex: 0 0 125%;
 }
 #portfolio-display div img{
-	max-width: 550px;
+	max-width: 80%px;
 }
 #portfolio-display div p{
 	text-align: center;
@@ -218,6 +218,7 @@ h1{
 }
 #services-display {
 	grid-area: services-display;
+
 }
 /* -------------------- SCROLL -------------------- */
 ::-webkit-scrollbar {
@@ -281,7 +282,7 @@ h1{
 @media (width <= 768px) {
 	main {
 		padding-inline: 3vw;
-		grid-template-rows: 10fr auto 1fr repeat(2, auto 10fr 1fr) auto 10fr;
+		grid-template-rows: 10fr auto 50px repeat(2, auto 10fr 50px) auto 10fr;
 		grid-template-columns: 1fr 2fr 1fr;
 		grid-template-areas:			
 			"presentation presentation	presentation"
@@ -309,7 +310,7 @@ h1{
 		flex: 0 0 120%;
 	}
 	#portfolio-display div img{
-		max-width: 400px;
+		max-width: 70%;
 	}
 }
 
