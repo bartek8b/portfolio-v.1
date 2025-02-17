@@ -9,7 +9,7 @@
 	background-color: var(--coldColor);
 	color: var(--backgroundColor);
 }
-a{
+a {
 	text-decoration: none;
 	color: var(--fontColor);
 }
@@ -55,7 +55,7 @@ footer {
 	justify-content: left;
 	border-top: 1px solid var(--fontColor);
 }
-#logo-header{
+#logo-header {
 	max-height: 30px;
 	filter: invert(10%);
 }
@@ -135,15 +135,15 @@ main {
 	background-color: var(--backgroundColor);
 	box-shadow: 3px 3px 5px var(--warmColor);
 }
-.visible{
+.visible {
 	opacity: 1;
 	transform: translateY(0);
 }
-.big-content{
+.big-content {
 	padding: 5rem;
 	justify-content: space-evenly;
 }
-.small-content{
+.small-content {
 	padding: 2rem;
 	align-items: center;
 	justify-content: center;
@@ -153,19 +153,18 @@ main {
 #presentation {
 	grid-area: presentation;
 }
-h1{
+h1 {
 	font-size: 2rem;
 	color: var(--coldColor);
 }
 #photo {
 	grid-area: photo;
 }
-#logo-photo-container{
+#logo-photo-container {
 	display: block;
 	max-width: 10rem;
 	filter: invert(10%);
 	align-self: center;
-	
 }
 #portfolio-caption {
 	grid-area: portfolio-caption;
@@ -179,7 +178,7 @@ h1{
 	scroll-padding: 0;
 	gap: 0;
 }
-.portfolio-item{
+.portfolio-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -187,21 +186,21 @@ h1{
 	scroll-snap-align: start;
 	flex: 0 0 125%;
 }
-.portfolio-item a{
+.portfolio-item a {
 	align-self: center;
 	transform: scale(100%);
 	transition: 0.3s linear;
 }
-.portfolio-item a:hover{
+.portfolio-item a:hover {
 	transform: scale(110%);
 }
-#portfolio-display{
+#portfolio-display {
 	text-align: center;
 }
-#portfolio-display div img{
-	max-width: 80%px;
+#portfolio-display div img {
+	max-width: 90%;
 }
-#portfolio-display div p{
+#portfolio-display div p {
 	text-align: center;
 }
 #tools-caption {
@@ -209,14 +208,14 @@ h1{
 }
 #tools-display {
 	grid-area: tools-display;
-	overflow-x:scroll;
+	overflow-x: scroll;
 	flex-direction: row;
 	justify-content: space-between;
 	scroll-snap-type: x mandatory;
 	scroll-padding: 0;
 	gap: 0;
 }
-.tools-item{
+.tools-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -224,7 +223,7 @@ h1{
 	scroll-snap-align: start;
 	flex: 0 0 62%;
 }
-#tools-display div img{
+#tools-display div img {
 	max-height: 200px;
 	filter: invert(15%);
 }
@@ -233,73 +232,71 @@ h1{
 }
 #services-display {
 	grid-area: services-display;
-
 }
 /* -------------------- SCROLL -------------------- */
 ::-webkit-scrollbar {
 	width: 10px;
 	height: 10px;
-  }
-  
+}
 
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background: var(--coldColor);
 	border-radius: 6px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
 	background: var(--backgroundColor);
-  }
+}
 
 /* -------------------- DARK COLOR SCHEME -------------------- */
 [data-theme="dark"] {
 	--backgroundColor: hsl(0, 0%, 25%);
 	--fontColor: hsl(0, 0%, 90%);
 
-	body{
+	body {
 		background: url(images/background.jpg) no-repeat center center;
 		background-size: cover;
 		*::selection {
 			background-color: var(--warmColor);
 			color: var(--fontColor);
 		}
-		#logo-header{
+		#logo-header {
 			filter: invert(75%);
 		}
 		.grid-items {
 			box-shadow: 3px 3px 5px var(--coldColor);
 		}
 	}
-	
-	#logo-photo-container{
+
+	#logo-photo-container {
 		filter: invert(75%);
 	}
-	h1{
+	h1 {
 		color: var(--warmColor);
 	}
 
-	#tools-display div img{
+	#tools-display div img {
 		filter: invert(85%);
-	}	
-
-	
+	}
 }
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (768px < width <= 1024px) {
 	main {
 		padding-inline: 5vw;
-}
-	.big-content{
+	}
+	.big-content {
 		padding: 4rem;
 	}
-
+	#portfolio-display div img {
+		max-width: 80%;
+	}
 }
 @media (width <= 768px) {
 	main {
 		padding-inline: 3vw;
 		grid-template-rows: 10fr auto 50px repeat(2, auto 10fr 50px) auto 10fr;
 		grid-template-columns: 1fr 2fr 1fr;
-		grid-template-areas:			
+		grid-template-areas:
 			"presentation presentation	presentation"
 			".	photo	."
 			".	.	."
@@ -312,21 +309,20 @@ h1{
 			".	tools-caption	."
 			"tools-display	tools-display	tools-display";
 	}
-	.big-content{
+	.big-content {
 		padding: 3rem;
 	}
-	.small-content{
+	.small-content {
 		aspect-ratio: 3 / 1;
 	}
 	#photo {
 		aspect-ratio: 1 / 1;
 	}
-	.tools-item, .portfolio-item{
+	.tools-item,
+	.portfolio-item {
 		flex: 0 0 120%;
 	}
-	#portfolio-display div img{
+	#portfolio-display div img {
 		max-width: 70%;
-
 	}
 }
-
