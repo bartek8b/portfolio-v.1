@@ -9,6 +9,10 @@
 	background-color: var(--coldColor);
 	color: var(--backgroundColor);
 }
+a{
+	text-decoration: none;
+	color: var(--fontColor);
+}
 :root {
 	color-scheme: light dark;
 	--backgroundColor: hsl(0, 0%, 90%);
@@ -183,6 +187,17 @@ h1{
 	scroll-snap-align: start;
 	flex: 0 0 125%;
 }
+.portfolio-item a{
+	align-self: center;
+	transform: scale(100%);
+	transition: 0.3s linear;
+}
+.portfolio-item a:hover{
+	transform: scale(110%);
+}
+#portfolio-display{
+	text-align: center;
+}
 #portfolio-display div img{
 	max-width: 80%px;
 }
@@ -311,6 +326,7 @@ h1{
 	}
 	#portfolio-display div img{
 		max-width: 70%;
+
 	}
 }
 
