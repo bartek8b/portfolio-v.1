@@ -49,8 +49,6 @@ items.forEach(item => {
 	observer.observe(item);
 })
 
-document.getElementsByTagName
-
 // HEADER VISIBLE ON SCROLL
 
 let lastScrollTop = 0;

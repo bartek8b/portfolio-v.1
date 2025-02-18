@@ -100,7 +100,7 @@ footer {
 	display: none;
 }
 main {
-	padding-block: 1rem;
+	padding-block: 2rem;
 	padding-inline: 10vw;
 	flex: 1;
 	display: grid;
@@ -118,8 +118,7 @@ main {
 		"services-display	services-display	services-display	services-display	."
 		".	.	.	.	."
 		"tools-caption	tools-display	tools-display	tools-display	tools-display"
-		".	tools-display	tools-display	tools-display	tools-display"
-		".	.	.	.	.";
+		".	tools-display	tools-display	tools-display	tools-display";
 }
 .grid-items {
 	position: relative;
