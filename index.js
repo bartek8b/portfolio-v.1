@@ -47,7 +47,7 @@ const observer = new IntersectionObserver(entries => {
 
 items.forEach(item => {
 	observer.observe(item);
-})
+});
 
 // HEADER VISIBLE ON SCROLL
 
@@ -57,11 +57,36 @@ window.addEventListener("scroll", () => {
 	let header = document.getElementById("header");
 	let scrollToTop = window.pageYOffset || document.documentElement.scrollTop;
 
-	if(scrollToTop > lastScrollTop){
+	if (scrollToTop > lastScrollTop) {
 		header.style.top = "-100%";
-	}
-	else{
+	} else {
 		header.style.top = "0";
 	}
 	lastScrollTop = scrollToTop;
-})
+});
+
+// LOGO/PHOTO FLIP
+
+let image = document.getElementById("logo-photo-container");
+
+
+function flip() {
+	let src = image.getAttribute("src");
+	if (src === "images/logo.png") {
+		image.setAttribute("src", "images/photo.jpg");
+		image.animate(
+			[{ transform: "rotateZ(-180deg)" }, { transform: "rotateZ(0deg)" }],
+			{ duration: 500, fill: "forwards" }
+		);
+	} else {
+		image.setAttribute("src", "images/logo.png");
+		image.animate(
+			[{ transform: "rotateZ(180deg)" }, { transform: "rotateZ(0deg)" }],
+			{ duration: 500, fill: "forwards" }
+		);
+	}
+}
+
+window.onload = () => {
+	setInterval(flip, 5000);
+};

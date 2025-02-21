@@ -150,6 +150,7 @@ main {
 #presentation {
 	grid-area: presentation;
 }
+
 h1 {
 	font-size: 2rem;
 	color: var(--coldColor);
@@ -159,9 +160,9 @@ h1 {
 }
 #logo-photo-container {
 	display: block;
-	max-width: 10rem;
-	filter: invert(10%);
+	width: 80%;
 	align-self: center;
+	border-radius: 50rem;
 }
 #portfolio-caption {
 	grid-area: portfolio-caption;
@@ -265,9 +266,6 @@ h1 {
 		}
 	}
 
-	#logo-photo-container {
-		filter: invert(75%);
-	}
 	h1 {
 		color: var(--warmColor);
 	}
