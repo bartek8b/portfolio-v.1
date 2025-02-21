@@ -160,7 +160,7 @@ h1 {
 }
 #logo-photo-container {
 	display: block;
-	width: 80%;
+	width: 90%;
 	align-self: center;
 	border-radius: 50rem;
 }
@@ -312,6 +312,9 @@ h1 {
 	}
 	#photo {
 		aspect-ratio: 1 / 1;
+	}
+	#logo-photo-container {
+		width: 100%;
 	}
 	.tools-item,
 	.portfolio-item {
