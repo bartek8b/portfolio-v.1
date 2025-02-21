@@ -217,7 +217,7 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	scroll-snap-align: start;
+	scroll-snap-align: center;
 	flex: 0 0 49%;
 }
 #tools-display div img {
