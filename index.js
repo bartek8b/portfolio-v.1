@@ -67,22 +67,23 @@ window.addEventListener("scroll", () => {
 
 // LOGO/PHOTO FLIP
 
-let image = document.getElementById("logo-photo-container");
-
-
 function flip() {
+	let image = document.getElementById("logo-photo-container");
 	let src = image.getAttribute("src");
 	if (src === "images/logo.png") {
 		image.setAttribute("src", "images/photo.jpg");
 		image.animate(
-			[{ transform: "rotateZ(-180deg)" }, { transform: "rotateZ(0deg)" }],
-			{ duration: 500, fill: "forwards" }
+			// key frames
+			{opacity: [0.5, 1], transform: ["rotateY(-180deg)", "rotateY(0deg)"] },
+			// options
+			{ duration: 500, fill: "both" }
 		);
 	} else {
 		image.setAttribute("src", "images/logo.png");
 		image.animate(
-			[{ transform: "rotateZ(180deg)" }, { transform: "rotateZ(0deg)" }],
-			{ duration: 500, fill: "forwards" }
+			{opacity: [0.5, 1], transform: ["rotateY(180deg)", "rotateY(0deg)"] },
+			// options
+			{ duration: 500, fill: "both" }
 		);
 	}
 }
