@@ -295,12 +295,12 @@ h1 {
 	main {
 		padding-inline: 3vw;
 		grid-template-rows: 10fr auto 50px repeat(2, auto 10fr 50px) auto 10fr;
-		grid-template-columns: 2fr 1fr 2fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas:
 			"presentation presentation	presentation"
 			".	.	photo"
 			".	.	."
-			"services-caption	.	."
+			"services-caption	.	."grid-template-columns: 1fr 1fr 1fr;
 			"services-display	services-display	services-display"
 			".	.	."
 			".	.	portfolio-caption"
