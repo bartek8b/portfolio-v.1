@@ -243,7 +243,8 @@ h1 {
 	align-self: flex-end;
 	margin-right: 2%;
 	margin-bottom: 2%;
-	padding: 2%;
+	padding-inline: 2%;
+	padding-block: 1%;
 	z-index: 1;
 	color: var(--warmColor);
 	background-color: var(--coldColor);
