@@ -145,7 +145,6 @@ main {
 	align-items: center;
 	justify-content: center;
 	aspect-ratio: 1 / 1;
-	scale: 90%;
 }
 #presentation {
 	grid-area: presentation;
@@ -318,9 +317,6 @@ h1 {
 	}
 	#photo {
 		aspect-ratio: 1 / 1;
-	}
-	#logo-photo-container {
-		width: 100%;
 	}
 	.tools-item,
 	.portfolio-item {
