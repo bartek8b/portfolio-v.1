@@ -245,9 +245,8 @@ h1 {
 	margin-bottom: 2%;
 	padding: 2%;
 	z-index: 1;
-	color: var(--coldColor);
-	background-color: transparent;
-	border: 1px solid var(--fontColor);
+	color: var(--warmColor);
+	background-color: var(--coldColor);
 	cursor: pointer;
 	opacity: 80%;
 }
@@ -294,9 +293,6 @@ h1 {
 	}
 	#tools-display div img {
 		filter: invert(85%);
-	}
-	#scroll-to-top-btn{
-		color: var(--warmColor)	
 	}
 }
 /* -------------------- MEDIA QUERIES -------------------- */
