@@ -107,6 +107,25 @@ nav ul{
 	display: flex;	
 	align-items: center;
 }
+nav ul li a{
+	position: relative;
+	width: fit-content;
+	color: var(--coldColor);
+	font-weight: bold;
+}
+nav ul li a::after{
+	content: "";
+	position: absolute;
+	background: var(--warmColor);
+	width: 0%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transition: width 0.3s;
+}
+nav ul li a:hover::after{
+	width: 100%;
+}
 main {
 	padding-block: 2rem;
 	padding-inline: 10vw;
@@ -258,8 +277,8 @@ h1 {
 	padding-inline: 2%;
 	padding-block: 1%;
 	z-index: 1;
-	color: var(--coldColor);
-	background-color: var(--warmColor);
+	color: var(--warmColor);
+	background-color: var(--coldColor);
 	cursor: pointer;
 	opacity: 50%;
 	transition: opacity 0.3s;
@@ -301,7 +320,12 @@ h1 {
 			box-shadow: 3px 3px 5px var(--coldColor);
 		}
 	}
-
+	nav ul li a{
+		color: var(--warmColor);
+	}
+	nav ul li a::after{
+		background: var(--coldColor);
+	}
 	h1 {
 		color: var(--warmColor);
 	}
@@ -312,8 +336,8 @@ h1 {
 		filter: invert(85%);
 	}
 	#scroll-to-top-btn {
-		color: var(--warmColor);
-		background-color: var(--coldColor);
+		color: var(--coldColor);
+		background-color: var(--warmColor);
 	}
 }
 /* -------------------- MEDIA QUERIES -------------------- */
