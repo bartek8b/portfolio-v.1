@@ -231,6 +231,26 @@ h1 {
 #services-display {
 	grid-area: services-display;
 }
+#scroll-to-top-btn{
+	font-size: 3rem;
+	font-weight: bold;
+	width: fit-content;
+	height: fit-content;
+	border-radius: 0.5rem;
+	position: sticky;
+	bottom: 1%;
+	transition: bottom 0.3s;
+	align-self: flex-end;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	padding: 2%;
+	z-index: 1;
+	color: var(--coldColor);
+	background-color: transparent;
+	border: 1px solid var(--fontColor);
+	cursor: pointer;
+	opacity: 80%;
+}
 /* -------------------- SCROLL -------------------- */
 ::-webkit-scrollbar {
 	width: 10px;
@@ -275,6 +295,8 @@ h1 {
 	#tools-display div img {
 		filter: invert(85%);
 	}
+	#scroll-to-top-btn{
+		color: var(--warmColor)	
 }
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (768px < width <= 1024px) {

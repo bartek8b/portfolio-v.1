@@ -55,12 +55,15 @@ let lastScrollTop = 0;
 
 window.addEventListener("scroll", () => {
 	let header = document.getElementById("header");
+	let scrollBtn = document.getElementById("scroll-to-top-btn");
 	let scrollToTop = window.pageYOffset || document.documentElement.scrollTop;
 
 	if (scrollToTop > lastScrollTop) {
 		header.style.top = "-100%";
+		scrollBtn.style.bottom = "2%"
 	} else {
 		header.style.top = "0";
+		scrollBtn.style.bottom = "-100%"
 	}
 	lastScrollTop = scrollToTop;
 });
