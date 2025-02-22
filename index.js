@@ -70,21 +70,15 @@ window.addEventListener("scroll", () => {
 function flip() {
 	let image = document.getElementById("logo-photo-container");
 	let src = image.getAttribute("src");
+	const animation = [{ transform: "scale(0, 1)", opacity: 0.5}, {transform: "scale(1, 1)", opacity: 1 },];
+	const options = { duration: 500, fill: "both" };
+
 	if (src === "images/logo.png") {
 		image.setAttribute("src", "images/photo.jpg");
-		image.animate(
-			// key frames
-			{opacity: [0.5, 1], transform: ["rotateY(-180deg)", "rotateY(0deg)"] },
-			// options
-			{ duration: 500, fill: "both" }
-		);
+		image.animate(animation, options);
 	} else {
 		image.setAttribute("src", "images/logo.png");
-		image.animate(
-			{opacity: [0.5, 1], transform: ["rotateY(180deg)", "rotateY(0deg)"] },
-			// options
-			{ duration: 500, fill: "both" }
-		);
+		image.animate(animation, options);
 	}
 }
 
