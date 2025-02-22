@@ -297,6 +297,7 @@ h1 {
 	}
 	#scroll-to-top-btn{
 		color: var(--warmColor)	
+	}
 }
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (768px < width <= 1024px) {
