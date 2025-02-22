@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
 }
 *::selection {
 	background-color: var(--coldColor);
@@ -28,7 +29,6 @@ body {
 	background: url(images/background_light.jpg) no-repeat center center;
 	background-size: cover;
 	text-wrap: balance;
-	scroll-behavior: smooth;
 }
 #body-container {
 	display: flex;
@@ -282,9 +282,6 @@ h1 {
 	cursor: pointer;
 	opacity: 50%;
 	transition: opacity 0.3s;
-}
-#scroll-to-top-btn:hover {
-	opacity: 100%;
 }
 /* -------------------- SCROLL -------------------- */
 ::-webkit-scrollbar {
