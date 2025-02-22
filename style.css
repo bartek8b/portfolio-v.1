@@ -98,6 +98,15 @@ footer {
 #toggleTheme {
 	display: none;
 }
+nav ul{
+	height: 100%;
+	position: relative;
+	left: 25vw;
+	gap: 3rem;
+	list-style: none;
+	display: flex;	
+	align-items: center;
+}
 main {
 	padding-block: 2rem;
 	padding-inline: 10vw;
@@ -231,12 +240,15 @@ h1 {
 #services-display {
 	grid-area: services-display;
 }
-#scroll-to-top-btn{
-	font-size: 3rem;
+#scroll-to-top-btn {
+	font-size: 2rem;
 	font-weight: bold;
 	width: fit-content;
-	height: fit-content;
-	border-radius: 0.5rem;
+	height: auto;
+	text-align: center;
+	aspect-ratio: 1/1;
+	border: 2px solid var(--backgroundColor);
+	border-radius: 50rem;
 	position: sticky;
 	bottom: 1%;
 	transition: bottom 0.3s;
@@ -246,10 +258,14 @@ h1 {
 	padding-inline: 2%;
 	padding-block: 1%;
 	z-index: 1;
-	color: var(--warmColor);
-	background-color: var(--coldColor);
+	color: var(--coldColor);
+	background-color: var(--warmColor);
 	cursor: pointer;
-	opacity: 80%;
+	opacity: 50%;
+	transition: opacity 0.3s;
+}
+#scroll-to-top-btn:hover {
+	opacity: 100%;
 }
 /* -------------------- SCROLL -------------------- */
 ::-webkit-scrollbar {
@@ -295,11 +311,19 @@ h1 {
 	#tools-display div img {
 		filter: invert(85%);
 	}
+	#scroll-to-top-btn {
+		color: var(--warmColor);
+		background-color: var(--coldColor);
+	}
 }
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (768px < width <= 1024px) {
 	main {
 		padding-inline: 5vw;
+	}
+	nav ul{
+		left: 20vw;
+		gap: 2rem;
 	}
 	.big-content {
 		padding: 4rem;
@@ -310,7 +334,7 @@ h1 {
 	.tools-item {
 		flex: 0 0 112%;
 	}
-	.tools-item{
+	.tools-item {
 		scroll-snap-align: center;
 	}
 }
@@ -332,6 +356,9 @@ h1 {
 			".	tools-caption	."
 			"tools-display	tools-display	tools-display";
 	}
+	nav ul{
+		display: none;
+	}
 	.big-content {
 		padding: 3rem;
 	}
@@ -345,7 +372,7 @@ h1 {
 	.portfolio-item {
 		flex: 0 0 112%;
 	}
-	.tools-item{
+	.tools-item {
 		scroll-snap-align: center;
 	}
 	#portfolio-display div img {
