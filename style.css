@@ -162,6 +162,7 @@ h1 {
 	width: 90%;
 	align-self: center;
 	border-radius: 50rem;
+	box-shadow: 1px 1px 4px var(--coldColor);
 }
 #portfolio-caption {
 	grid-area: portfolio-caption;
@@ -268,7 +269,9 @@ h1 {
 	h1 {
 		color: var(--warmColor);
 	}
-
+	#logo-photo-container {
+		box-shadow: 1px 1px 4px var(--warmColor);
+	}
 	#tools-display div img {
 		filter: invert(85%);
 	}
