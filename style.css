@@ -295,18 +295,18 @@ h1 {
 	main {
 		padding-inline: 3vw;
 		grid-template-rows: 10fr auto 50px repeat(2, auto 10fr 50px) auto 10fr;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 2fr 1fr;
 		grid-template-areas:
 			"presentation presentation	presentation"
-			".	.	photo"
+			".	photo ."
 			".	.	."
-			"services-caption	.	."
+			".	services-caption	."
 			"services-display	services-display	services-display"
 			".	.	."
-			".	.	portfolio-caption"
+			".	portfolio-caption	."
 			"portfolio-display portfolio-display	portfolio-display"
 			".	.	."
-			"tools-caption	.	."
+			".	tools-caption	."
 			"tools-display	tools-display	tools-display";
 	}
 	.big-content {
