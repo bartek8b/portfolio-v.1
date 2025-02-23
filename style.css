@@ -210,20 +210,20 @@ h1 {
 }
 #portfolio-display {
 	grid-area: portfolio-display;
-	overflow-x: scroll;
-	flex-direction: row;
-	justify-content: space-between;
-	scroll-snap-type: x mandatory;
-	scroll-padding: 0;
-	gap: 10%;
 }
-.portfolio-item {
+.portfolio-item, .services-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	scroll-snap-align: center;
 	flex: 0 0 100%;
+	border: 2px solid var(--coldColor);
+	border-radius: 0.3rem;
+	padding: 2rem;
+	min-width: 70%;
+	height: auto;
+	box-shadow: 1px 1px 3px var(--fontColor);
 }
 .portfolio-item a {
 	align-self: center;
@@ -249,7 +249,7 @@ h1 {
 	grid-area: tools-display;
 }
 #tools-display,
-#services-display {
+#services-display, #portfolio-display {
 	overflow-x: scroll;
 	flex-direction: row;
 	justify-content: space-between;
@@ -257,8 +257,7 @@ h1 {
 	scroll-padding: 0;
 	gap: 23%;
 }
-.tools-item,
-.services-item {
+.tools-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -267,15 +266,6 @@ h1 {
 }
 .tools-item {
 	flex: 0 0 40%;
-}
-.services-item,
-.portfolio-item {
-	border: 2px solid var(--coldColor);
-	border-radius: 0.3rem;
-	padding: 2rem;
-	min-width: 70%;
-	height: auto;
-	box-shadow: 1px 1px 3px var(--fontColor);
 }
 #tools-display div img {
 	max-height: 200px;
