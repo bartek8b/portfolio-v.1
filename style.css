@@ -113,7 +113,7 @@ nav ul {
 .translate-out {
 	transform: translateX(-100%);
 }
-nav ul li a{
+nav ul li a {
 	position: relative;
 	width: fit-content;
 	color: var(--coldColor);
@@ -145,7 +145,7 @@ main {
 	flex: 1;
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-rows: repeat(3, 1fr 1fr 75px) 1fr 1fr;
+	grid-template-rows: repeat(3, auto 1fr 75px) auto 1fr;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-areas:
 		"presentation	presentation	 presentation	presentation	photo"
@@ -212,7 +212,8 @@ h1 {
 #portfolio-display {
 	grid-area: portfolio-display;
 }
-.portfolio-item, .services-item {
+.portfolio-item,
+.services-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -250,7 +251,8 @@ h1 {
 	grid-area: tools-display;
 }
 #tools-display,
-#services-display, #portfolio-display {
+#services-display,
+#portfolio-display {
 	overflow-x: scroll;
 	flex-direction: row;
 	justify-content: space-between;
@@ -282,8 +284,8 @@ h1 {
 	list-style: none;
 }
 .services-item-list-style li {
-	padding: 2rem;
-	font-size: 1.5rem;
+	padding: 1.5rem;
+	font-size: 1.3rem;
 	text-align: center;
 }
 #scroll-to-top-btn {
@@ -348,7 +350,7 @@ h1 {
 	.portfolio-item {
 		border: 2px solid var(--warmColor);
 	}
-	nav ul li a{
+	nav ul li a {
 		color: var(--warmColor);
 	}
 	nav img {
