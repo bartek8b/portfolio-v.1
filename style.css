@@ -194,6 +194,7 @@ main {
 h1 {
 	font-size: 1.6rem;
 	color: var(--coldColor);
+	text-align: center;
 }
 #photo {
 	grid-area: photo;
@@ -282,6 +283,8 @@ h1 {
 }
 .services-item-list-style li {
 	padding: 2rem;
+	font-size: 1.5rem;
+	text-align: center;
 }
 #scroll-to-top-btn {
 	font-size: 2rem;
