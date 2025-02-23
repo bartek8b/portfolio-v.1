@@ -400,7 +400,7 @@ h1 {
 			"tools-display	tools-display	tools-display";
 	}
 	nav ul {
-		display: flex;
+		display: none;
 		padding: 2rem;
 		position: absolute;
 		background-color: var(--backgroundColor);
