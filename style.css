@@ -196,6 +196,36 @@ h1 {
 	color: var(--coldColor);
 	text-align: center;
 }
+#call-to-action-btn{
+	position: relative;
+	right: 10%;
+	align-self: flex-end;
+	background-color: var(--coldColor);
+	color: var(--backgroundColor);
+	padding: 1rem;
+	width: fit-content;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	box-shadow: 1px 1px 3px var(--fontColor);
+}
+#call-to-action-btn::after{
+	content: "Zamów wycenę";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	background-color: var(--warmColor);
+	border-radius: 0.3rem;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	transition: opacity 0.3s;
+	opacity: 0;
+}
+#call-to-action-btn:hover::after {
+	opacity: 1;
+}
 #photo {
 	grid-area: photo;
 }
@@ -290,7 +320,7 @@ h1 {
 }
 #scroll-to-top-btn {
 	font-size: 2rem;
-	font-weight: bold;
+	font-weight: bolder;
 	width: fit-content;
 	height: auto;
 	text-align: center;
@@ -306,11 +336,14 @@ h1 {
 	padding-inline: 2%;
 	padding-block: 1%;
 	z-index: 1;
-	color: var(--warmColor);
+	color: var(--backgroundColor);
 	background-color: var(--coldColor);
 	cursor: pointer;
 	opacity: 50%;
 	transition: opacity 0.3s;
+}
+#scroll-to-top-btn:hover {
+	background-color: var(--warmColor);
 }
 /* -------------------- SCROLL -------------------- */
 ::-webkit-scrollbar {
@@ -346,6 +379,12 @@ h1 {
 			box-shadow: 3px 3px 5px var(--coldColor);
 		}
 	}
+	#call-to-action-btn{
+		background-color: var(--warmColor);
+			}
+	#call-to-action-btn::after{
+		background-color: var(--coldColor);
+			}
 	.services-item,
 	.portfolio-item {
 		border: 2px solid var(--warmColor);
@@ -363,8 +402,10 @@ h1 {
 		filter: invert(85%);
 	}
 	#scroll-to-top-btn {
-		color: var(--coldColor);
 		background-color: var(--warmColor);
+	}
+	#scroll-to-top-btn:hover {
+		background-color: var(--coldColor);
 	}
 }
 /* -------------------- KEY FRAMES -------------------- */
