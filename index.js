@@ -60,10 +60,10 @@ window.addEventListener("scroll", () => {
 
 	if (scrollToTop > lastScrollTop) {
 		header.style.top = "-100%";
-		scrollBtn.style.bottom = "2%"
+		scrollBtn.style.bottom = "2%";
 	} else {
 		header.style.top = "0";
-		scrollBtn.style.bottom = "-100%"
+		scrollBtn.style.bottom = "-100%";
 	}
 	lastScrollTop = scrollToTop;
 });
@@ -73,7 +73,10 @@ window.addEventListener("scroll", () => {
 function flip() {
 	let image = document.getElementById("logo-photo-container");
 	let src = image.getAttribute("src");
-	const animation = [{ transform: "scale(0, 1)", opacity: 0.5}, {transform: "scale(1, 1)", opacity: 1 },];
+	const animation = [
+		{ transform: "scale(0, 1)", opacity: 0.5 },
+		{ transform: "scale(1, 1)", opacity: 1 },
+	];
 	const options = { duration: 500, fill: "both" };
 
 	if (src === "images/logo.png") {
@@ -88,3 +91,45 @@ function flip() {
 window.onload = () => {
 	setInterval(flip, 5000);
 };
+
+// NAVBAR MOBILE
+let menu = document.getElementById("menu");
+let barsBtn = document.getElementById("menuBars");
+let xBtn = document.getElementById("xButton");
+
+function showNavbar() {
+	barsBtn.style.display = "none";
+	xBtn.style.display = "flex";
+	menu.style.display = "flex";
+	menu.classList.remove("translate-out");
+	menu.classList.add("translate-in");
+}
+
+function hideNavbar() {
+	barsBtn.style.display = "flex";
+	xBtn.style.display = "none";
+	menu.classList.add("translate-out");
+	menu.classList.remove("translate-in");
+}
+
+function updateWidth() {
+	const windowWidth = window.innerWidth;
+
+	if (windowWidth > 768) {
+		menu.style.display = "flex";
+		barsBtn.style.display = "none";
+		xBtn.style.display = "none";		
+		menu.classList.remove("translate-out");
+		menu.classList.add("translate-in");
+
+	} else {
+		barsBtn.style.display = "flex";
+		menu.style.display = "none";
+		xBtn.style.display = "none";
+		menu.classList.add("translate-out");
+		menu.classList.remove("translate-in");
+	}
+}
+
+window.addEventListener("resize", updateWidth);
+window.addEventListener("scroll", updateWidth);

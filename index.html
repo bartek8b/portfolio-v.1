@@ -17,10 +17,12 @@
             <img src="images/logo_small.png" alt="logo" id="logo-header">
 
             <nav>
-                <ul>                    
-                    <li><a href="#services-caption">Oferta</a></li>
-                    <li><a href="#portfolio-caption">Portfolio</a></li>
-                    <li><a href="#tools-caption">Warsztat</a></li>
+                <img id="menuBars" src="images/icons/bars-solid.svg" alt="" onclick="showNavbar()">
+                <img id="xButton" src="images/icons/xmark-solid.svg" alt="" onclick="hideNavbar()">
+                <ul id="menu">                    
+                    <li><a href="#services-caption" onclick="updateWidth()">Oferta</a></li>
+                    <li><a href="#portfolio-caption" onclick="updateWidth()">Portfolio</a></li>
+                    <li><a href="#tools-caption" onclick="updateWidth()">Warsztat</a></li>
                 </ul>
             </nav>
 

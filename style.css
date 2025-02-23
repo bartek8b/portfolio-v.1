@@ -98,22 +98,28 @@ footer {
 #toggleTheme {
 	display: none;
 }
-nav ul{
+nav ul {
 	height: 100%;
 	position: relative;
 	left: 25vw;
 	gap: 3rem;
 	list-style: none;
-	display: flex;	
+	display: flex;
 	align-items: center;
 }
-nav ul li a{
+.translate-in{
+	transform: translateX(0);
+}
+.translate-out{
+	transform: translateX(-100%);
+}
+nav ul li a {
 	position: relative;
 	width: fit-content;
 	color: var(--coldColor);
 	font-weight: bold;
 }
-nav ul li a::after{
+nav ul li a::after {
 	content: "";
 	position: absolute;
 	background: var(--warmColor);
@@ -123,8 +129,15 @@ nav ul li a::after{
 	left: 0;
 	transition: width 0.3s;
 }
-nav ul li a:hover::after{
+nav ul li a:hover::after {
 	width: 100%;
+}
+nav img {
+	display: none;
+	height: 2rem;
+	width: auto;
+	filter: invert(15%);
+	cursor: pointer;
 }
 main {
 	padding-block: 2rem;
@@ -317,11 +330,14 @@ h1 {
 			box-shadow: 3px 3px 5px var(--coldColor);
 		}
 	}
-	nav ul li a{
+	nav ul li a {
 		color: var(--warmColor);
 	}
-	nav ul li a::after{
+	nav ul li a::after {
 		background: var(--coldColor);
+	}
+	nav img {
+		filter: invert(85%);
 	}
 	h1 {
 		color: var(--warmColor);
@@ -337,12 +353,21 @@ h1 {
 		background-color: var(--warmColor);
 	}
 }
+/* -------------------- KEY FRAMES -------------------- */
+@keyframes scroll-on {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (768px < width <= 1024px) {
 	main {
 		padding-inline: 5vw;
 	}
-	nav ul{
+	nav ul {
 		left: 20vw;
 		gap: 2rem;
 	}
@@ -377,7 +402,26 @@ h1 {
 			".	tools-caption	."
 			"tools-display	tools-display	tools-display";
 	}
-	nav ul{
+	nav ul {
+		display: flex;
+		padding: 2rem;
+		position: absolute;
+		background-color: var(--backgroundColor);
+		border-top: 1px solid var(--fontColor);
+		border-bottom: 1px solid var(--fontColor);
+		width: 100%;
+		height: fit-content;
+		top: 3rem;
+		left: 0;
+		flex-direction: column;
+		z-index: 1;
+		transition: 0.3s;
+		animation: scroll-on 0.3s;
+	}
+	#menuBars {
+		display: flex;
+	}
+	#xButton {
 		display: none;
 	}
 	.big-content {
