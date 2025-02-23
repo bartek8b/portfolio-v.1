@@ -122,7 +122,7 @@ nav ul li a {
 nav ul li a::after {
 	content: "";
 	position: absolute;
-	background: var(--warmColor);
+	background: var(--fontColor);
 	width: 0%;
 	height: 2px;
 	bottom: 0;
@@ -332,9 +332,6 @@ h1 {
 	}
 	nav ul li a {
 		color: var(--warmColor);
-	}
-	nav ul li a::after {
-		background: var(--coldColor);
 	}
 	nav img {
 		filter: invert(85%);
