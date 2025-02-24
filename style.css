@@ -184,8 +184,19 @@ main {
 .small-content {
 	padding: 2rem;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	aspect-ratio: 1 / 1;
+}
+.sweep-icons-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.sweep-icons-container img{
+	max-width: 12%;
+	padding-top: 1rem;
+	filter: invert(10%);
 }
 #presentation {
 	grid-area: presentation;
@@ -379,6 +390,9 @@ h1 {
 	#call-to-action-btn {
 		background-color: var(--warmColor);
 	}
+	.sweep-icons-container img{
+		filter: invert(85%);
+	}
 	.services-item,
 	.portfolio-item {
 		border: 2px solid var(--warmColor);
@@ -479,7 +493,9 @@ h1 {
 		padding: 3rem;
 	}
 	.small-content {
-		aspect-ratio: 3 / 1;
+		aspect-ratio: 2 / 1;
+		justify-content: center;
+		}
 	}
 	#call-to-action-btn {
 		right: 0%;
@@ -499,4 +515,3 @@ h1 {
 	#portfolio-display div img {
 		max-width: 70%;
 	}
-}
