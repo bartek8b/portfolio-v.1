@@ -352,6 +352,10 @@ h1 {
 	opacity: 50%;
 	transition: opacity 0.3s;
 }
+#scroll-to-top-btn:hover {
+	color: var(--warmColor);
+	border: 2px solid var(--warmColor);
+}
 /* -------------------- SCROLL -------------------- */
 ::-webkit-scrollbar {
 	width: 10px;
@@ -413,6 +417,10 @@ h1 {
 	}
 	#scroll-to-top-btn {
 		background-color: var(--warmColor);
+	}
+	#scroll-to-top-btn:hover {
+		color: var(--coldColor);
+		border: 2px solid var(--coldColor);
 	}
 }
 /* -------------------- KEY FRAMES -------------------- */

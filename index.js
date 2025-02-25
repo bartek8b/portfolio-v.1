@@ -72,14 +72,14 @@ window.addEventListener("scroll", () => {
 
 function flip() {
 	let image = document.getElementById("logo-photo-container");
-	let src = image.getAttribute("src");
+	let logoSrc = image.getAttribute("src");
 	const animation = [
 		{ transform: "scale(0, 1)", opacity: 0.5 },
 		{ transform: "scale(1, 1)", opacity: 1 },
 	];
 	const options = { duration: 500, fill: "both" };
 
-	if (src === "images/logo.png") {
+	if (logoSrc === "images/logo.png") {
 		image.setAttribute("src", "images/photo.jpg");
 		image.animate(animation, options);
 	} else {
@@ -96,6 +96,7 @@ window.onload = () => {
 let menu = document.getElementById("menu");
 let barsBtn = document.getElementById("menuBars");
 let xBtn = document.getElementById("xButton");
+let icons = document.querySelectorAll(".sweep-icon");
 
 function showNavbar() {
 	barsBtn.style.display = "none";
@@ -114,6 +115,15 @@ function hideNavbar() {
 
 function updateWidth() {
 	const windowWidth = window.innerWidth;
+
+	icons.forEach(icon => {
+		if(windowWidth > 1024){
+			icon.setAttribute("src", "images/icons/computer-mouse-solid.svg");
+		}
+		else{
+			icon.setAttribute("src", "images/icons/hand-pointer-solid.svg");
+		}
+	});
 
 	if (windowWidth > 768) {
 		menu.style.display = "flex";
