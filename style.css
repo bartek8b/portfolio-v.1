@@ -198,6 +198,9 @@ main {
 	padding-top: 1rem;
 	filter: invert(10%);
 }
+.sweep-icon{
+	animation: sweep 3s ease-in infinite;
+}
 #presentation {
 	grid-area: presentation;
 }
@@ -252,6 +255,7 @@ h1 {
 }
 #portfolio-display {
 	grid-area: portfolio-display;
+	text-align: center;
 }
 .portfolio-item,
 .services-item {
@@ -274,9 +278,6 @@ h1 {
 }
 .portfolio-item a:hover {
 	transform: scale(110%);
-}
-#portfolio-display {
-	text-align: center;
 }
 #portfolio-display div img {
 	max-width: 90%;
@@ -429,6 +430,26 @@ h1 {
 		transform: translateX(-100%);
 	}
 	to {
+		transform: translateX(0);
+	}
+}
+@keyframes sweep {
+	0% {
+		transform: translateX(0);
+	}
+	20% {
+		transform: translateX(0);
+	}
+	40% {
+		transform: translateX(0);
+	}
+	60% {
+		transform: translateX(-50%);
+	}
+	80% {
+		transform: translateX(20%);
+	}
+	100% {
 		transform: translateX(0);
 	}
 }
