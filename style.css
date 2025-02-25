@@ -299,7 +299,7 @@ h1 {
 	justify-content: space-between;
 	scroll-snap-type: x mandatory;
 	scroll-padding: 0;
-	gap: 3%;
+	gap: 23%;
 }
 .tools-item {
 	display: flex;
