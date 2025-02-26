@@ -5,8 +5,6 @@
 	padding: 0;
 	-webkit-tap-highlight-color: transparent;
 	scroll-behavior: smooth;
-	scrollbar-width: thin;
-	scrollbar-color: var(--coldColor) var(--backgroundColor);
 }
 *::selection {
 	background-color: var(--coldColor);
@@ -367,8 +365,8 @@ h1 {
 	color: var(--warmColor);
 	border: 2px solid var(--warmColor);
 }
-/* -------------------- SCROLL -------------------- */
-/* ::-webkit-scrollbar {
+/* -------------------- SCROLLBAR -------------------- */
+::-webkit-scrollbar {
 	width: 10px;
 	height: 10px;
 }
@@ -380,7 +378,7 @@ h1 {
 
 ::-webkit-scrollbar-track {
 	background: var(--backgroundColor);
-} */
+}
 
 /* -------------------- DARK COLOR SCHEME -------------------- */
 [data-theme="dark"] {
