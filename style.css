@@ -288,7 +288,7 @@ h1 {
 	transform: scale(110%);
 }
 #portfolio-display div img {
-	max-width: 90%;
+	max-width: 70%;
 }
 #portfolio-display div p {
 	text-align: center;
@@ -535,7 +535,7 @@ h1 {
 		right: 0%;
 	}
 	#portfolio-display div img {
-		max-width: 70%;
+		max-width: 90%;
 	}
 	.tools-item {
 		flex: 0 0 112%;
