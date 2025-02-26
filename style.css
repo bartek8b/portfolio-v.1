@@ -262,6 +262,11 @@ h1 {
 	grid-area: portfolio-display;
 	text-align: center;
 }
+.services-item,
+.portfolio-item {
+		flex: 0 0 112%;
+	}
+
 .portfolio-item,
 .services-item {
 	display: flex;
@@ -275,7 +280,6 @@ h1 {
 	min-width: 70%;
 	height: auto;
 	box-shadow: 1px 1px 3px var(--fontColor);
-	flex: 0 0 112%;
 }
 .portfolio-item a {
 	align-self: center;
@@ -380,23 +384,22 @@ h1 {
 
 /* -------------------- DARK COLOR SCHEME -------------------- */
 [data-theme="dark"] {
-	
 	--backgroundColor: hsl(0, 0%, 25%);
 	--fontColor: hsl(0, 0%, 90%);
 
-	*::selection {
-		background-color: var(--warmColor);
-		color: var(--fontColor);
-	}
 	body {
 		background: url(images/background.jpg) no-repeat center center;
 		background-size: cover;
-	}
-	#logo-header {
-		filter: invert(75%);
-	}
-	.grid-items {
-		box-shadow: 3px 3px 5px var(--coldColor);
+		*::selection {
+			background-color: var(--warmColor);
+			color: var(--fontColor);
+		}
+		#logo-header {
+			filter: invert(75%);
+		}
+		.grid-items {
+			box-shadow: 3px 3px 5px var(--coldColor);
+		}
 	}
 	nav ul li a::after {
 		background: var(--coldColor);
@@ -482,14 +485,6 @@ h1 {
 	#portfolio-display div img {
 		max-width: 80%;
 	}
-	.tools-item,
-	.services-item {
-		flex: 0 0 112%;
-	}
-	.tools-item,
-	.services-item {
-		scroll-snap-align: center;
-	}
 }
 @media (width <= 768px) {
 	main {
@@ -538,11 +533,18 @@ h1 {
 		aspect-ratio: 2 / 1;
 		justify-content: center;
 	}
-	#portfolio-display div img {
-		max-width: 70%;
-	}
-
 	#call-to-action-btn {
 		right: 0%;
 	}
+	#portfolio-display div img {
+		max-width: 70%;
+	}
+	.tools-item {
+		flex: 0 0 112%;
+	}
+	
 }
+
+
+
+
