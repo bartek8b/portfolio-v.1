@@ -178,7 +178,8 @@ main {
 	transform: translateY(0);
 }
 .big-content {
-	padding: 5rem;
+	padding-block: 5rem;
+	padding-inline: 18%;
 	justify-content: space-evenly;
 }
 .small-content {
@@ -475,10 +476,13 @@ h1 {
 		gap: 2rem;
 	}
 	.big-content {
-		padding: 4rem;
+		padding-block: 4rem;
 	}
 	#call-to-action-btn {
 		right: 5%;
+	}
+	#presentation {
+		padding-inline: 9%;
 	}
 	#portfolio-display div img {
 		max-width: 80%;
