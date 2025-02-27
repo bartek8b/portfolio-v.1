@@ -316,9 +316,10 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	scroll-snap-align: center;
+	flex: 0 0 50%;
 }
-.tools-item {
-	flex: 0 0 40%;
+#tools-display-first-child{
+	margin-left: -17%;
 }
 #tools-display div img {
 	max-height: 200px;
@@ -544,7 +545,9 @@ h1 {
 	.tools-item {
 		flex: 0 0 112%;
 	}
-	
+	#tools-display-first-child{
+		margin-left: 0%;
+	}
 }
 
 
