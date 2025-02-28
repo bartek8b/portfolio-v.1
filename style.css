@@ -213,7 +213,6 @@ main {
 	font-family: 'Courier Prime', Courier, monospace;
 	width: 0;
 	text-align: left;
-	padding-inline: auto;
 	overflow: hidden;
 	white-space: nowrap;
 	border-right: 2px solid var(--fontColor);
