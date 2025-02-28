@@ -34,8 +34,7 @@ body {
 	flex-direction: column;
 	min-height: 100dvh;
 }
-header,
-footer {
+header {
 	display: flex;
 	padding: 0.5rem;
 	background-color: var(--backgroundColor);
@@ -49,10 +48,8 @@ header {
 	transition: top 0.3s;
 	border-bottom: 1px solid var(--fontColor);
 }
-footer {
-	justify-content: left;
-	border-top: 1px solid var(--fontColor);
-}
+
+
 #logo-header {
 	max-height: 30px;
 	filter: invert(10%);
@@ -378,6 +375,38 @@ h1 {
 	color: var(--warmColor);
 	border: 2px solid var(--warmColor);
 }
+footer {
+	display: flex;
+	padding: auto;
+	background-color: var(--backgroundColor);
+	border-top: 1px solid var(--fontColor);
+}
+footer > div {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	padding-inline: 2rem;
+	aspect-ratio: 3/2;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	opacity: 50%;
+}
+footer > div > ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+footer > div > ul > li > img {
+	height: 2.5rem;
+	filter: invert(10%);
+}
+footer > div > img {
+	width: 20%;
+	filter: invert(10%);
+}
+
 /* -------------------- SCROLLBAR -------------------- */
 ::-webkit-scrollbar {
 	width: 10px;
@@ -448,6 +477,12 @@ h1 {
 		color: var(--coldColor);
 		border: 2px solid var(--coldColor);
 	}
+	footer > div > img {
+		filter: invert(75%);		
+	}
+	footer > div > ul > li > img {
+		filter: invert(75%);
+	}
 }
 /* -------------------- KEY FRAMES -------------------- */
 @keyframes scroll-on {
@@ -512,6 +547,12 @@ h1 {
 	#portfolio-display div img {
 		max-width: 80%;
 	}
+	footer > div {
+		aspect-ratio: 1/1;
+	}
+	footer > div > img {
+		width: 30%;
+	}
 }
 @media (width <= 768px) {
 	main {
@@ -571,6 +612,16 @@ h1 {
 	}
 	#tools-display-first-child{
 		margin-left: 0%;
+	}
+	footer {
+		flex-direction: column;
+	}
+	footer > div {
+		width: 100%;
+		aspect-ratio: 1/1;
+	}
+	footer > div > img {
+		width: 30%;
 	}
 }
 
