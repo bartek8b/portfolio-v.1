@@ -398,9 +398,31 @@ footer > div > ul {
 	flex-direction: column;
 	gap: 4rem;
 }
-footer > div > ul > li > img {
-	height: 2.5rem;
+footer > div > ul > li {
+	position: relative;
+	margin-right: auto;
+}
+footer > div > ul img {
+	height: 2rem;
 	filter: invert(10%);
+	transition: 0.3s linear;
+}
+footer > div > ul img:hover {
+	transform: scale(115%);
+}
+footer > div > ul > li::after {
+	position: relative;
+	left: 10%;
+	bottom: 25%;
+}
+#email-icon::after {
+	content: "bartek8b@outlook.com";
+}
+#github-icon::after {
+	content: "github.com/bartek8b";
+}
+#instagram-icon::after {
+	content: "@8artolini";
 }
 footer > div > img {
 	width: 20%;
@@ -480,7 +502,7 @@ footer > div > img {
 	footer > div > img {
 		filter: invert(75%);		
 	}
-	footer > div > ul > li > img {
+	footer > div > ul img {
 		filter: invert(75%);
 	}
 }
