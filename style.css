@@ -233,7 +233,7 @@ h1 {
 	box-shadow: 1px 1px 3px var(--fontColor);
 }
 #call-to-action-btn::after {
-	content: "Zamów wycenę";
+	content: "Wypełnij formularz";
 	display: flex;
 	align-items: center;
 	justify-content: center;
