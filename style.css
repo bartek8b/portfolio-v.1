@@ -17,16 +17,15 @@ a {
 	color-scheme: light dark;
 	--backgroundColor: hsl(0, 0%, 90%);
 	--fontColor: hsl(0, 0%, 10%);
-	--warmColor: hsl(50, 100%, 40%);
-	--coldColor: hsl(120, 40%, 30%);
+	--warmColor: hsla(50, 100%, 40%, 0.9);
+	--coldColor: hsl(120, 40%, 30%, 0.9);
 }
 body {
 	font-family: "Roboto", Helvetica, sans-serif;
 	font-size: 1.1rem;
-	background-color: var(--backgroundColor);
 	color: var(--fontColor);
-	background: url(images/background_light.jpg) no-repeat center center;
-	background-size: cover;
+	background: radial-gradient(ellipse at bottom, var(--warmColor), var(--backgroundColor));
+	background-size:contain;
 	text-wrap: balance;
 }
 #body-container {
@@ -437,9 +436,8 @@ footer > div > img {
 	--backgroundColor: hsl(0, 0%, 25%);
 	--fontColor: hsl(0, 0%, 90%);
 
-	body {
-		background: url(images/background.jpg) no-repeat center center;
-		background-size: cover;		
+	body{
+		background: radial-gradient(ellipse at bottom, var(--coldColor), var(--backgroundColor));
 	}
 	.grid-items {
 		box-shadow: 3px 3px 5px var(--coldColor);
