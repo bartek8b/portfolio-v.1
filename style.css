@@ -166,7 +166,7 @@ main {
 	height: 100%;
 	width: 100%;
 	background-color: var(--backgroundColor);
-	box-shadow: 3px 3px 5px var(--warmColor);
+	box-shadow: 2px 2px 5px var(--coldColor);
 }
 .visible {
 	opacity: 1;
@@ -440,7 +440,7 @@ footer > div > img {
 		background: radial-gradient(ellipse at bottom, var(--coldColor), var(--backgroundColor));
 	}
 	.grid-items {
-		box-shadow: 3px 3px 5px var(--coldColor);
+		box-shadow: 2px 2px 5px var(--warmColor);
 	}
 	#logo-header {
 		filter: invert(75%);
