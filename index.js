@@ -74,16 +74,12 @@ function flip() {
 	let image = document.getElementById("logo-photo-container");
 	let logoSrc = image.getAttribute("src");
 	const animation = [
-		{ transform: "scale(0, 1)", opacity: 0},
-		{ transform: "scale(0.5, 1)", opacity: 0.5 },
-		{ transform: "scale(1, 1)", opacity: 1 },
-		{ transform: "scale(1, 1)", opacity: 1 },
-		{ transform: "scale(1, 1)", opacity: 1 },
-		{ transform: "scale(1, 1)", opacity: 1 },
-		{ transform: "scale(1, 1)", opacity: 1 },
-		{ transform: "scale(1, 1)", opacity: 1 },
-		{ transform: "scale(0.5, 1)", opacity: 0.5 },
-		{ transform: "scale(0, 1)", opacity: 0},
+		{ offset: 0, transform: "scale(0, 1)", opacity: 0 },
+		{ offset: 0.1, transform: "scale(0.5, 1)", opacity: 0.5 },
+		{ offset: 0.2, transform: "scale(1, 1)", opacity: 1 },
+		{ offset: 0.8, transform: "scale(1, 1)", opacity: 1 },
+		{ offset: 0.9, transform: "scale(0.5, 1)", opacity: 0.5 },
+		{ offset: 1, transform: "scale(0, 1)", opacity: 0 },
 	];
 	const options = { duration: 5000, fill: "both" };
 
