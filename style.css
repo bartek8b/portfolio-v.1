@@ -17,15 +17,16 @@ a {
 	color-scheme: light dark;
 	--backgroundColor: hsl(0, 0%, 90%);
 	--fontColor: hsl(0, 0%, 10%);
-	--warmColor: hsla(50, 100%, 40%, 0.9);
-	--coldColor: hsl(120, 40%, 30%, 0.9);
+	--warmColor: hsl(50, 100%, 40%);
+	--coldColor: hsl(120, 40%, 30%);
 }
 body {
 	font-family: "Roboto", Helvetica, sans-serif;
 	font-size: 1.1rem;
+	background-color: var(--backgroundColor);
 	color: var(--fontColor);
-	background: radial-gradient(ellipse at bottom, var(--warmColor), var(--backgroundColor));
-	background-size:contain;
+	background: url(images/background_light.jpg) no-repeat center center;
+	background-size: cover;
 	text-wrap: balance;
 }
 #body-container {
@@ -166,7 +167,7 @@ main {
 	height: 100%;
 	width: 100%;
 	background-color: var(--backgroundColor);
-	box-shadow: 2px 2px 5px var(--coldColor);
+	box-shadow: 3px 3px 5px var(--warmColor);
 }
 .visible {
 	opacity: 1;
@@ -436,11 +437,12 @@ footer > div > img {
 	--backgroundColor: hsl(0, 0%, 25%);
 	--fontColor: hsl(0, 0%, 90%);
 
-	body{
-		background: radial-gradient(ellipse at bottom, var(--coldColor), var(--backgroundColor));
+	body {
+		background: url(images/background.jpg) no-repeat center center;
+		background-size: cover;		
 	}
 	.grid-items {
-		box-shadow: 2px 2px 5px var(--warmColor);
+		box-shadow: 3px 3px 5px var(--coldColor);
 	}
 	#logo-header {
 		filter: invert(75%);
