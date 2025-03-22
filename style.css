@@ -372,7 +372,6 @@ h1 {
 	color: var(--backgroundColor);
 	background-color: var(--coldColor);
 	cursor: pointer;
-	transition: opacity 0.3s;
 }
 #scroll-to-top-btn:hover {
 	color: var(--warmColor);
