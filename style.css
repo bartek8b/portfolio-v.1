@@ -15,7 +15,7 @@ a {
 }
 :root {
 	color-scheme: light dark;
-	--backgroundColor: hsl(0, 0%, 90%);
+	--backgroundColor: #e6e6e6;
 	--backgroundFooter: hsl(0, 0%, 70%);
 	--fontColor: hsl(0, 0%, 10%);
 	--warmColor: hsl(50, 100%, 40%);
@@ -372,7 +372,6 @@ h1 {
 	color: var(--backgroundColor);
 	background-color: var(--coldColor);
 	cursor: pointer;
-	opacity: 50%;
 	transition: opacity 0.3s;
 }
 #scroll-to-top-btn:hover {
