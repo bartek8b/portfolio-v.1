@@ -386,6 +386,7 @@ h1 {
 	transition: bottom 0.3s;
 	align-self: flex-end;
 	margin-right: 2%;
+	margin-bottom: 1%;
 	padding-inline: 2%;
 	padding-block: 1%;
 	z-index: 1;
