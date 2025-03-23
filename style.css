@@ -27,7 +27,7 @@ body {
 	font-size: 1.1rem;
 	background-color: var(--backgroundColor);
 	color: var(--fontColor);
-	background: content-box radial-gradient( hsla(50, 100%, 40%, 0.85), hsla(0, 0%, 70%, 0.85));
+	background: content-box radial-gradient( hsla(50, 100%, 75%, 0.85), hsla(0, 0%, 90%, 0.85));
 	background-size: cover;
 	text-wrap: balance;
 }
@@ -442,7 +442,7 @@ footer > div > img {
 	--boxShadow: hsla(120, 40%, 30%, 0.8);
 
 	body {
-		background: content-box radial-gradient(hsla(120, 40%, 30%, 0.85), hsla(0, 0%, 18%, 0.85));
+		background: content-box radial-gradient(hsla(120, 40%, 25%, 0.85), hsla(0, 0%, 18%, 0.85));
 		background-size: cover;		
 	}
 	#logo-header {

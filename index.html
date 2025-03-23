@@ -55,21 +55,73 @@
         },
         preferences: {
         title: "Dostosuj swoje preferencje dotyczące plików cookie",
-        description: "<p>Możesz wybrać opcję nie zezwalania na użycie plików cookie. Twoje preferencje dotyczące plików cookie będą miały zastosowanie w całej naszej witrynie.</p>",
+        description: "<p>Możesz wybrać opcję nie zezwalania na użycie plików cookie.</p>",
         creditLinkText: "",
         creditLinkAccessibleLabel: ""
         }
     }
     });
+    </script><link rel="stylesheet" id="silktide-consent-manager-css" href="path-to-css/silktide-consent-manager.css">
+<script src="path-to-js/silktide-consent-manager.js"></script>
+<script>
+    silktideCookieBannerManager.updateCookieBannerConfig({
+    background: {
+        showBackground: false
+    },
+    cookieIcon: {
+        position: "bottomLeft"
+    },
+    cookieTypes: [
+        {
+        id: "anonimowa_analiza_ruchu",
+        name: "Anonimowa analiza ruchu",
+        description: "<p>Strona używa plików cookie do analizy ruchu za pomocą Google Analytics 4. Twoje dane są anonimowe.</p>",
+        required: false,
+        onAccept: function() {
+            gtag('consent', 'update', {
+            analytics_storage: 'granted',
+            });
+            dataLayer.push({
+            'event': 'consent_accepted_anonimowa_analiza_ruchu',
+            });
+        },
+        onReject: function() {
+            gtag('consent', 'update', {
+            analytics_storage: 'denied',
+            });
+        }
+        }
+    ],
+    text: {
+        banner: {
+        description: "<p><span style=\"letter-spacing: 0.34px;\">Strona używa plików cookie do analizy ruchu za pomocą Google Analytics 4. Twoje dane są anonimowe.</span><br><br><a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\">Jak Google wykorzystuje dane gromadzone podczas korzystania z witryn i aplikacji</a></p>",
+        acceptAllButtonText: "Zaakceptuj",
+        acceptAllButtonAccessibleLabel: "Zaakceptuj cookies",
+        rejectNonEssentialButtonText: "Odrzuć",
+        rejectNonEssentialButtonAccessibleLabel: "Odrzuć non-essential",
+        preferencesButtonText: "Preferencje",
+        preferencesButtonAccessibleLabel: "Toggle preferences"
+        },
+        preferences: {
+        title: "Dostosuj swoje preferencje dotyczące plików cookie",
+        description: "<p>Możesz wybrać opcję nie zezwalania na użycie plików cookie. Twoje preferencje dotyczące plików cookie będą miały zastosowanie w całej naszej witrynie.</p>",
+        creditLinkText: "Get this banner for free",
+        creditLinkAccessibleLabel: "Get this banner for free"
+        }
+    },
+    position: {
+        banner: "bottomCenter"
+    }
+    });
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KSZFXCY2B"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KSZFXCY2B"></script> -->
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('js', new Date());
 
-    gtag('config', 'G-5KSZFXCY2B');
+    // gtag('config', 'G-5KSZFXCY2B');
     </script>
 </head>
 

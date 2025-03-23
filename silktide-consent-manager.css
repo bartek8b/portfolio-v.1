@@ -13,13 +13,13 @@
               --focus: 0 0 0 2px #ffffff, 0 0 0 4px #000000, 0 0 0 6px #ffffff;
               --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
               --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
-              --primaryColor: #f9d000;
+              --primaryColor: #B3B3B3;
               --backgroundColor: #2e6b2e;
-              --textColor: #E6E6E6;
-              --backdropBackgroundColor: #00000033;
+              --textColor: #b3b3b3;
+              --backdropBackgroundColor: #00000000;
               --backdropBackgroundBlur: 0px;
-              --cookieIconColor: #2E6B2E;
-              --cookieIconBackgroundColor: #F9D000;
+              --cookieIconColor: #B3B3B3;
+              --cookieIconBackgroundColor: #2E6B2E;
               position: fixed;
   bottom: 0;
   right: 0;
@@ -490,7 +490,7 @@
 }
 
 #silktide-cookie-icon svg {
-  fill: hsl(0, 0%, 60%);
+  fill: var(--cookieIconBackgroundColor);
 }
 
 /* --------------------------------
