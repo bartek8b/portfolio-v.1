@@ -490,7 +490,7 @@
 }
 
 #silktide-cookie-icon svg {
-  fill: var(--cookieIconBackgroundColor);
+  fill: hsl(0, 0%, 60%);
 }
 
 /* --------------------------------
