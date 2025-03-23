@@ -50,8 +50,6 @@ header {
 	transition: top 0.3s;
 	border-bottom: 1px solid var(--fontColor);
 }
-
-
 #logo-header {
 	max-height: 30px;
 	filter: invert(10%);
@@ -179,6 +177,30 @@ main {
 	padding-block: 5rem;
 	padding-inline: 18%;
 	justify-content: space-evenly;
+}
+#privacy-policy{
+	display: none;
+	align-self: center;
+	margin-block: 3rem;
+	max-width: 75%;
+	padding-inline: 10%;
+	flex-direction: column;
+	gap: 2rem;
+}
+#close-privacy-policy{
+	display: flex;
+	color: var(--coldColor);
+	background-color: hsl(0, 0%, 70%);
+	cursor: pointer;
+	width: fit-content;
+	aspect-ratio: 1 / 1;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	padding: 0.5rem;
+	font-size: 2rem;
+	font-weight: 900;
+	align-self: flex-end;
 }
 .small-content {
 	padding: 2rem;
@@ -629,6 +651,9 @@ footer > div > img {
 	}
 	#tools-display-first-child{
 		margin-left: 0%;
+	}
+	#privacy-policy{
+		max-width: 90%;
 	}
 	footer {
 		flex-direction: column;

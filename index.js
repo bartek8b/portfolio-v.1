@@ -148,3 +148,20 @@ function updateWidth() {
 
 window.addEventListener("resize", updateWidth);
 window.addEventListener("scroll", updateWidth);
+
+// PRIVACY POLICY
+
+const privacyPolicyLink = document.querySelector("#privacy-policy-link");
+const main = document.querySelector("main");
+const privacyPolicyDisplay = document.querySelector("#privacy-policy");
+const privacyPolicyClose = document.querySelector("#close-privacy-policy");
+
+privacyPolicyLink.addEventListener("click", () => {
+	main.style.display = "none";
+	privacyPolicyDisplay.style.display = "flex";
+})
+
+privacyPolicyClose.addEventListener("click", () => {
+	main.style.display = "grid";
+	privacyPolicyDisplay.style.display = "none";
+});
