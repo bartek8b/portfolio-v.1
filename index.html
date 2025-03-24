@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="8b Web Development Bartłomiej Balcerzak - strony internetowe wizytówki, portfolio">
+    <meta name="description"
+        content="8b Web Development Bartłomiej Balcerzak - strony internetowe wizytówki, portfolio">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,57 +17,15 @@
     <!-- Cookie banner -->
     <link rel="stylesheet" id="silktide-consent-manager-css" href="silktide-consent-manager.css">
     <script src="silktide-consent-manager.js"></script>
+
     <script>
-        silktideCookieBannerManager.updateCookieBannerConfig({
-            background: {
-                showBackground: false
-            },
-            cookieIcon: {
-                position: "bottomLeft"
-            },
-            cookieTypes: [
-                {
-                    id: "analiza_ruchu_na_stronie",
-                    name: "Analiza ruchu na stronie",
-                    description: "<p><span style=\"letter-spacing: 0.34px;\">Pliki cookie do analizy ruchu za pomocą Google Analytics 4. Twoje dane są anonimowe.</span></p>",
-                    required: false,
-                    onAccept: function () {
-                        gtag('consent', 'update', {
-                            analytics_storage: 'granted',
-                        });
-                        dataLayer.push({
-                            'event': 'consent_accepted_analiza_ruchu_na_stronie',
-                        });
-                    },
-                    onReject: function () {
-                        gtag('consent', 'update', {
-                            analytics_storage: 'denied',
-                        });
-                    }
-                }
-            ],
-            text: {
-                banner: {
-                    description: "<p>Strona używa plików cookie do analizy ruchu za pomocą Google Analytics 4. Twoje dane są anonimowe.</p>",
-                    acceptAllButtonText: "Zaakceptuj",
-                    acceptAllButtonAccessibleLabel: "Zaakceptuj",
-                    rejectNonEssentialButtonText: "Odrzuć",
-                    rejectNonEssentialButtonAccessibleLabel: "Odrzuć",
-                    preferencesButtonText: "Preferencje",
-                    preferencesButtonAccessibleLabel: "Preferencje"
-                },
-                preferences: {
-                    title: "Dostosuj swoje preferencje dotyczące plików cookie",
-                    description: "<p>Możesz wybrać opcję nie zezwalania na użycie plików cookie.</p>",
-                    creditLinkText: "",
-                    creditLinkAccessibleLabel: ""
-                }
-            }
-        });
-    </script>
-    <link rel="stylesheet" id="silktide-consent-manager-css" href="path-to-css/silktide-consent-manager.css">
-    <script src="path-to-js/silktide-consent-manager.js"></script>
-    <script>
+        // Inicjalizacja gtag i dataLayer
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        // Konfiguracja banera cookies
         silktideCookieBannerManager.updateCookieBannerConfig({
             background: {
                 showBackground: false
@@ -81,17 +40,38 @@
                     description: "<p>Strona używa plików cookie do analizy ruchu za pomocą Google Analytics 4. Twoje dane są anonimowe.</p>",
                     required: false,
                     onAccept: function () {
-                        gtag('consent', 'update', {
-                            analytics_storage: 'granted',
-                        });
-                        dataLayer.push({
-                            'event': 'consent_accepted_anonimowa_analiza_ruchu',
-                        });
+                        // Ładowanie Google Analytics tylko po uzyskaniu zgody
+                        const script = document.createElement('script');
+                        script.async = true;
+                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-5KSZFXCY2B";
+
+                        // Obsługa błędów podczas ładowania skryptu
+                        script.onerror = function () {
+                            console.error("Nie udało się załadować Google Analytics.");
+                        };
+
+                        document.head.appendChild(script);
+
+                        script.onload = function () {
+                            gtag('js', new Date());
+                            gtag('config', 'G-5KSZFXCY2B');
+                            gtag('consent', 'update', {
+                                analytics_storage: 'granted',
+                            });
+                            dataLayer.push({
+                                'event': 'consent_accepted_anonimowa_analiza_ruchu',
+                            });
+                        };
                     },
                     onReject: function () {
-                        gtag('consent', 'update', {
-                            analytics_storage: 'denied',
-                        });
+                        // Aktualizacja zgody na przechowywanie danych analitycznych
+                        if (typeof gtag === "function") {
+                            gtag('consent', 'update', {
+                                analytics_storage: 'denied',
+                            });
+                        } else {
+                            console.warn("Google Analytics nie zostało zainicjalizowane.");
+                        }
                     }
                 }
             ],
@@ -116,15 +96,6 @@
                 banner: "bottomCenter"
             }
         });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KSZFXCY2B"></script> -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-5KSZFXCY2B');
     </script>
 </head>
 
@@ -165,7 +136,9 @@
                 <br>
                 <p>
                     Nazywam się Bartłomiej Balcerzak i specjalizuję się w tworzeniu atrakcyjnych, funkcjonalnych stron
-                    internetowych, dostosowanych do urządzeń mobilnych. Pomogę Twojej działaności wyróżnić się w internecie za pomocą strony wizytówki. Możesz liczyć na indywidualne podejście i dostosowanie projektu do Twoich potrzeb.
+                    internetowych, dostosowanych do urządzeń mobilnych. Pomogę Twojej działaności wyróżnić się w
+                    internecie za pomocą strony wizytówki. Możesz liczyć na indywidualne podejście i dostosowanie
+                    projektu do Twoich potrzeb.
                     <br>
                     <br>
                     Strona responsywna, SEO, hosting, SSL - niewiele Ci to mówi? Wszystko Ci wyjaśnię zanim zaczniemy
