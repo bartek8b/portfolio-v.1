@@ -68,34 +68,34 @@ window.addEventListener("scroll", () => {
 	lastScrollTop = scrollToTop;
 });
 
-// LOGO/PHOTO FLIP
+// LOGO/PHOTO FLIP - OFF
 
-function flip() {
-	let image = document.getElementById("logo-photo-container");
-	let logoSrc = image.getAttribute("src");
-	const animation = [
-		{ offset: 0, transform: "scale(0, 1)", opacity: 0 },
-		{ offset: 0.1, transform: "scale(0.5, 1)", opacity: 0.9 },
-		{ offset: 0.2, transform: "scale(1, 1)", opacity: 1 },
-		{ offset: 0.8, transform: "scale(1, 1)", opacity: 1 },
-		{ offset: 0.9, transform: "scale(0.5, 1)", opacity: 0.9 },
-		{ offset: 1, transform: "scale(0, 1)", opacity: 0 },
-	];
-	const options = { duration: 5000, fill: "both" };
+// function flip() {
+// 	let image = document.getElementById("logo-photo-container");
+// 	let logoSrc = image.getAttribute("src");
+// 	const animation = [
+// 		{ offset: 0, transform: "scale(0, 1)", opacity: 0 },
+// 		{ offset: 0.1, transform: "scale(0.5, 1)", opacity: 0.9 },
+// 		{ offset: 0.2, transform: "scale(1, 1)", opacity: 1 },
+// 		{ offset: 0.8, transform: "scale(1, 1)", opacity: 1 },
+// 		{ offset: 0.9, transform: "scale(0.5, 1)", opacity: 0.9 },
+// 		{ offset: 1, transform: "scale(0, 1)", opacity: 0 },
+// 	];
+// 	const options = { duration: 5000, fill: "both" };
 
-	if (logoSrc === "images/logo.png") {
-		image.setAttribute("src", "images/photo.jpg");
-		image.animate(animation, options);
-	} else {
-		image.setAttribute("src", "images/logo.png");
-		image.animate(animation, options);
-	}
-}
+// 	if (logoSrc === "images/logo.png") {
+// 		image.setAttribute("src", "images/photo.jpg");
+// 		image.animate(animation, options);
+// 	} else {
+// 		image.setAttribute("src", "images/logo.png");
+// 		image.animate(animation, options);
+// 	}
+// }
 
-window.onload = () => {
-	flip();
-	setInterval(flip, 5000);
-};
+// window.onload = () => {
+// 	flip();
+// 	setInterval(flip, 5000);
+// };
 
 // NAVBAR MOBILE
 let menu = document.getElementById("menu");
