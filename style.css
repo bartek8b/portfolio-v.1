@@ -4,6 +4,8 @@
 	padding: 0;
 	-webkit-tap-highlight-color: transparent;
 	scroll-behavior: smooth;
+	scrollbar-width: auto;
+  	scrollbar-color: var(--coldColor) var(--backgroundColor);
 }
 *::selection {
 	background-color: var(--warmColor);
@@ -438,21 +440,6 @@ footer > div > ul > li::after {
 footer > div > img {
 	width: 20%;
 	filter: invert(30%);
-}
-
-/* -------------------- SCROLLBAR -------------------- */
-::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--coldColor);
-	border-radius: 6px;
-}
-
-::-webkit-scrollbar-track {
-	background: var(--backgroundColor);
 }
 
 /* -------------------- DARK COLOR SCHEME -------------------- */
