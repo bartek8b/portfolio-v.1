@@ -26,7 +26,8 @@ a {
 }
 body {
 	font-family: "Roboto", Helvetica, sans-serif;
-	font-size: 1.1rem;
+	font-size: calc(1rem + 0.2vw);
+	line-height: 1.5;
 	background-color: var(--backgroundColor);
 	color: var(--fontColor);
 	background: content-box radial-gradient( hsla(50, 100%, 75%, 0.85), hsla(0, 0%, 90%, 0.85));
@@ -42,8 +43,6 @@ header {
 	display: flex;
 	padding: 0.5rem;
 	background-color: var(--backgroundColor);
-}
-header {
 	justify-content: space-between;
 	padding-inline: 3%;
 	position: sticky;
@@ -242,7 +241,7 @@ main {
 	animation: typing 3s steps(18) forwards, blink 1s step-end infinite;
 }
 h1 {
-	font-size: 1.6rem;
+	font-size: calc(1.5rem + 0.2vw);
 	color: var(--coldColor);
 	text-align: center;
 }
