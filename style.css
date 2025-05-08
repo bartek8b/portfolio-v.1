@@ -614,6 +614,9 @@ footer > div > img {
 		justify-content: center;
 		padding: 5rem;
 	}
+	#photo {
+		aspect-ratio: 2 / 1;
+	}
 	#call-to-action-btn {
 		right: 0%;
 	}
