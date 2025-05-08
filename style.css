@@ -224,6 +224,10 @@ main {
 .sweep-icon{
 	height: 4rem;
 }
+.arrow-icon{
+	height: 2.5rem;
+	align-self: center;
+}
 #presentation {
 	grid-area: presentation;
 }
