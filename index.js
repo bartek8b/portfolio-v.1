@@ -121,15 +121,6 @@ function hideNavbar() {
 function updateWidth() {
 	const windowWidth = window.innerWidth;
 
-	icons.forEach(icon => {
-		if(windowWidth > 1024){
-			icon.setAttribute("src", "images/icons/computer-mouse-solid.svg");
-		}
-		else{
-			icon.setAttribute("src", "images/icons/hand-pointer-solid.svg");
-		}
-	});
-
 	if (windowWidth > 768) {
 		menu.style.display = "flex";
 		barsBtn.style.display = "none";

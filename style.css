@@ -216,13 +216,13 @@ main {
 	width: 100%;
 }
 .sweep-icons-container img {
-	max-width: 1.1rem;
+	max-width: 2rem;
 	padding-top: 1rem;
 	filter: invert(10%);
 	opacity: 50%;
 }
 .sweep-icon{
-	animation: sweep 3s ease-in infinite;
+	height: 4rem;
 }
 #presentation {
 	grid-area: presentation;
@@ -520,26 +520,7 @@ footer > div > img {
 		transform: translateX(0);
 	}
 }
-@keyframes sweep {
-	0% {
-		transform: translateX(0);
-	}
-	20% {
-		transform: translateX(0);
-	}
-	40% {
-		transform: translateX(0);
-	}
-	60% {
-		transform: translateX(-50%);
-	}
-	80% {
-		transform: translateX(20%);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
+
 @keyframes typing {
 	from{
 		width: 0;
@@ -627,6 +608,7 @@ footer > div > img {
 	.small-content {
 		aspect-ratio: 2 / 1;
 		justify-content: center;
+		padding: 5rem;
 	}
 	#call-to-action-btn {
 		right: 0%;
