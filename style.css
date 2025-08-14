@@ -5,7 +5,7 @@
 	-webkit-tap-highlight-color: transparent;
 	scroll-behavior: smooth;
 	scrollbar-width: auto;
-  	scrollbar-color: var(--coldColor) var(--backgroundColor);
+	scrollbar-color: var(--coldColor) var(--backgroundColor);
 }
 *::selection {
 	background-color: var(--warmColor);
@@ -30,7 +30,8 @@ body {
 	line-height: 1.5;
 	background-color: var(--backgroundColor);
 	color: var(--fontColor);
-	background: content-box radial-gradient( hsla(50, 100%, 75%, 0.85), hsla(0, 0%, 90%, 0.85));
+	background: content-box
+		radial-gradient(hsla(50, 100%, 75%, 0.85), hsla(0, 0%, 90%, 0.85));
 	background-size: cover;
 	text-wrap: balance;
 }
@@ -179,7 +180,7 @@ main {
 	padding-inline: 18%;
 	justify-content: space-evenly;
 }
-#privacy-policy{
+#privacy-policy {
 	display: none;
 	align-self: center;
 	margin-block: 3rem;
@@ -188,7 +189,7 @@ main {
 	flex-direction: column;
 	gap: 2rem;
 }
-#close-privacy-policy{
+#close-privacy-policy {
 	display: flex;
 	color: var(--coldColor);
 	background-color: hsl(0, 0%, 70%);
@@ -221,28 +222,24 @@ main {
 	filter: invert(10%);
 	opacity: 50%;
 }
-.sweep-icon{
+.sweep-icon {
 	height: 4rem;
-}
-.arrow-icon{
-	height: 2.5rem;
-	align-self: center;
 }
 #presentation {
 	grid-area: presentation;
 }
-#typewriter{
+#typewriter {
 	display: flex;
 	justify-content: left;
 }
-#signature{
-	font-family: 'Courier Prime', Courier, monospace;
+#signature {
+	font-family: "Courier Prime", Courier, monospace;
 	width: 0;
 	text-align: left;
 	overflow: hidden;
 	white-space: nowrap;
 	border-right: 2px solid var(--fontColor);
-	animation: typing 4s steps(18) forwards, blink 1s step-end infinite;
+	animation: typing 3s steps(18) forwards, blink 1s step-end infinite;
 }
 h1 {
 	font-size: calc(1.5rem + 0.2vw);
@@ -262,7 +259,7 @@ h1 {
 	box-shadow: 1px 1px 3px var(--boxShadow);
 }
 #call-to-action-btn::after {
-	content: "Wypełnij formularz";
+	content: "Zamów kontakt";
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -300,8 +297,8 @@ h1 {
 }
 .services-item,
 .portfolio-item {
-		flex: 0 0 112%;
-	}
+	flex: 0 0 112%;
+}
 
 .portfolio-item,
 .services-item {
@@ -355,7 +352,7 @@ h1 {
 	scroll-snap-align: center;
 	flex: 0 0 50%;
 }
-#tools-display-first-child{
+#tools-display-first-child {
 	margin-left: -17%;
 }
 #tools-display div img {
@@ -430,7 +427,7 @@ footer > div > ul img {
 	height: 2rem;
 	transition: 0.3s linear;
 	margin-bottom: 5%;
-	filter: invert(30%)
+	filter: invert(30%);
 }
 footer > div > ul img:hover {
 	transform: scale(110%);
@@ -453,8 +450,9 @@ footer > div > img {
 	--boxShadow: hsla(120, 40%, 30%, 0.8);
 
 	body {
-		background: content-box radial-gradient(hsla(120, 40%, 25%, 0.85), hsla(0, 0%, 18%, 0.85));
-		background-size: cover;		
+		background: content-box
+			radial-gradient(hsla(120, 40%, 25%, 0.85), hsla(0, 0%, 18%, 0.85));
+		background-size: cover;
 	}
 	#logo-header {
 		filter: invert(75%);
@@ -509,7 +507,7 @@ footer > div > img {
 		color: var(--fontColor);
 	}
 	footer > div > img {
-		filter: invert(82%);		
+		filter: invert(82%);
 	}
 	footer > div > ul img {
 		filter: invert(75%);
@@ -526,15 +524,15 @@ footer > div > img {
 }
 
 @keyframes typing {
-	from{
+	0% {
 		width: 0;
 	}
-	to{
+	100% {
 		width: 100%;
 	}
 }
 @keyframes blink {
-	50%{
+	50% {
 		border-color: transparent;
 	}
 }
@@ -610,12 +608,12 @@ footer > div > img {
 		padding: 3rem;
 	}
 	.small-content {
-		aspect-ratio: 2 / 1;
+		aspect-ratio: 1 / 1;
 		justify-content: center;
-		padding: 5rem;
+		padding: 1rem;
 	}
 	#photo {
-		aspect-ratio: 2 / 1;
+		aspect-ratio: 1 / 1;
 	}
 	#call-to-action-btn {
 		right: 0%;
@@ -626,10 +624,10 @@ footer > div > img {
 	.tools-item {
 		flex: 0 0 112%;
 	}
-	#tools-display-first-child{
+	#tools-display-first-child {
 		margin-left: 0%;
 	}
-	#privacy-policy{
+	#privacy-policy {
 		max-width: 90%;
 	}
 	footer {
@@ -643,7 +641,3 @@ footer > div > img {
 		width: 30%;
 	}
 }
-
-
-
-
