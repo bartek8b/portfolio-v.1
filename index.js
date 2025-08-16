@@ -68,6 +68,91 @@ window.addEventListener("scroll", () => {
 	lastScrollTop = scrollToTop;
 });
 
+// NAVBAR MOBILE
+let menu = document.getElementById("menu");
+let barsBtn = document.getElementById("menuBars");
+let xBtn = document.getElementById("xButton");
+let icons = document.querySelectorAll(".sweep-icon");
+
+function showNavbar() {
+	barsBtn.style.display = "none";
+	xBtn.style.display = "flex";
+	menu.style.display = "flex";
+	menu.classList.remove("translate-out");
+	menu.classList.add("translate-in");
+}
+
+function hideNavbar() {
+	barsBtn.style.display = "flex";
+	xBtn.style.display = "none";
+	menu.classList.add("translate-out");
+	menu.classList.remove("translate-in");
+}
+
+function updateWidth() {
+	const windowWidth = window.innerWidth;
+
+	if (windowWidth > 768) {
+		menu.style.display = "flex";
+		barsBtn.style.display = "none";
+		xBtn.style.display = "none";
+		menu.classList.remove("translate-out");
+		menu.classList.add("translate-in");
+	} else {
+		barsBtn.style.display = "flex";
+		menu.style.display = "none";
+		xBtn.style.display = "none";
+		menu.classList.add("translate-out");
+		menu.classList.remove("translate-in");
+	}
+}
+
+window.addEventListener("resize", updateWidth);
+window.addEventListener("scroll", updateWidth);
+
+// PRIVACY POLICY
+
+const privacyPolicyLink = document.querySelector("#privacy-policy-link");
+const main = document.querySelector("main");
+const privacyPolicyDisplay = document.querySelector("#privacy-policy");
+const privacyPolicyClose = document.querySelector("#close-privacy-policy");
+
+privacyPolicyLink.addEventListener("click", () => {
+	main.style.display = "none";
+	privacyPolicyDisplay.style.display = "flex";
+});
+
+privacyPolicyClose.addEventListener("click", () => {
+	main.style.display = "grid";
+	privacyPolicyDisplay.style.display = "none";
+});
+
+// SCROLL HINT 
+
+document.querySelectorAll('.big-content[id$="-display"]').forEach(display => {
+    let hintShown = false;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hintShown && display.scrollWidth > display.clientWidth) {
+                const children = Array.from(display.children);
+                if (children.length > 1) {
+                    const secondChild = children[1];
+                    const shift = secondChild.offsetLeft;
+
+                    display.scrollTo({ left: shift, behavior: 'smooth' });
+                    setTimeout(() => {
+                        display.scrollTo({ left: 0, behavior: 'smooth' });
+                    }, 700); // animatin time in ms
+                }
+                hintShown = true;
+                observer.unobserve(display); 
+            }
+        });
+    }, { threshold: .6 }); // trigger when 60% container is visible
+
+    observer.observe(display);
+});
+
 // LOGO/PHOTO FLIP - OFF
 
 // function flip() {
@@ -96,63 +181,3 @@ window.addEventListener("scroll", () => {
 // 	flip();
 // 	setInterval(flip, 5000);
 // };
-
-// NAVBAR MOBILE
-let menu = document.getElementById("menu");
-let barsBtn = document.getElementById("menuBars");
-let xBtn = document.getElementById("xButton");
-let icons = document.querySelectorAll(".sweep-icon");
-
-function showNavbar() {
-	barsBtn.style.display = "none";
-	xBtn.style.display = "flex";
-	menu.style.display = "flex";
-	menu.classList.remove("translate-out");
-	menu.classList.add("translate-in");
-}
-
-function hideNavbar() {
-	barsBtn.style.display = "flex";
-	xBtn.style.display = "none";
-	menu.classList.add("translate-out");
-	menu.classList.remove("translate-in");
-}
-
-function updateWidth() {
-	const windowWidth = window.innerWidth;
-
-	if (windowWidth > 768) {
-		menu.style.display = "flex";
-		barsBtn.style.display = "none";
-		xBtn.style.display = "none";		
-		menu.classList.remove("translate-out");
-		menu.classList.add("translate-in");
-
-	} else {
-		barsBtn.style.display = "flex";
-		menu.style.display = "none";
-		xBtn.style.display = "none";
-		menu.classList.add("translate-out");
-		menu.classList.remove("translate-in");
-	}
-}
-
-window.addEventListener("resize", updateWidth);
-window.addEventListener("scroll", updateWidth);
-
-// PRIVACY POLICY
-
-const privacyPolicyLink = document.querySelector("#privacy-policy-link");
-const main = document.querySelector("main");
-const privacyPolicyDisplay = document.querySelector("#privacy-policy");
-const privacyPolicyClose = document.querySelector("#close-privacy-policy");
-
-privacyPolicyLink.addEventListener("click", () => {
-	main.style.display = "none";
-	privacyPolicyDisplay.style.display = "flex";
-})
-
-privacyPolicyClose.addEventListener("click", () => {
-	main.style.display = "grid";
-	privacyPolicyDisplay.style.display = "none";
-});
