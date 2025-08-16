@@ -148,7 +148,7 @@ document.querySelectorAll('.big-content[id$="-display"]').forEach(display => {
                 observer.unobserve(display); 
             }
         });
-    }, { threshold: .6 }); // trigger when 60% container is visible
+    }, { threshold: .4 }); // trigger when ...% container is visible
 
     observer.observe(display);
 });
