@@ -591,7 +591,7 @@ footer > div > img {
 		border-bottom: 1px solid var(--fontColor);
 		width: 100%;
 		height: fit-content;
-		top: 3rem;
+		top: 3.3rem;
 		left: 0;
 		flex-direction: column;
 		z-index: 1;
