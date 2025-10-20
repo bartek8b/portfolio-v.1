@@ -176,7 +176,7 @@ main {
 	transform: translateY(0);
 }
 .big-content {
-	padding-block: 5rem;
+	padding-block: 4rem;
 	padding-inline: 18%;
 	justify-content: space-evenly;
 }
@@ -545,9 +545,6 @@ footer > div > img {
 		left: 20vw;
 		gap: 2rem;
 	}
-	.big-content {
-		padding-block: 4rem;
-	}
 	#call-to-action-btn {
 		right: 5%;
 	}
@@ -605,7 +602,7 @@ footer > div > img {
 		display: none;
 	}
 	.big-content {
-		padding: 3rem;
+		padding-block: 3rem;
 	}
 	.small-content {
 		aspect-ratio: 1 / 1;
