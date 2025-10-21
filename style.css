@@ -57,7 +57,7 @@ header {
 	max-height: 30px;
 	filter: invert(10%);
 	position: relative;
-	top: .2rem;
+	top: 0.2rem;
 }
 #toggleThemeContainer {
 	display: flex;
@@ -563,7 +563,11 @@ footer > div > img {
 	footer > div > img {
 		width: 30%;
 	}
+	.grid-items {
+		max-height: fit-content;
+	}
 }
+
 @media (width <= 768px) {
 	main {
 		padding-inline: 3vw;
@@ -603,6 +607,9 @@ footer > div > img {
 	}
 	#xButton {
 		display: none;
+	}
+	.grid-items {
+		max-height: fit-content;
 	}
 	.big-content {
 		padding: 3rem;
