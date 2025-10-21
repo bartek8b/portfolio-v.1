@@ -169,7 +169,7 @@ main {
 	border-radius: 0.5rem;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	max-height: 90vh;
 	width: 100%;
 	background-color: var(--backgroundColor);
 	box-shadow: 2px 2px 3px var(--boxShadow);
