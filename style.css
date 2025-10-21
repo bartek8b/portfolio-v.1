@@ -605,7 +605,7 @@ footer > div > img {
 		display: none;
 	}
 	.big-content {
-		padding-block: 3rem;
+		padding: 3rem;
 	}
 	.small-content {
 		aspect-ratio: 1 / 1;
