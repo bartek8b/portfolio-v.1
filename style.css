@@ -178,11 +178,10 @@ main {
 	opacity: 1;
 	transform: translateY(0);
 }
-.grid-items.big-content {
+.big-content {
 	padding-block: 4rem;
 	padding-inline: 18%;
 	justify-content: space-evenly;
-	max-height: 90dvh;
 }
 #privacy-policy {
 	display: none;
