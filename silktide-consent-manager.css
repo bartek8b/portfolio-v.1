@@ -451,6 +451,7 @@
   flex-direction: column;
   gap: 16px;
   margin-top: 24px;
+  background: transparent;
 }
 
 @media (min-width: 600px) {
