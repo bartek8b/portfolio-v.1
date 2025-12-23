@@ -15,89 +15,6 @@
     <link rel="stylesheet" href="modern-normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>8b.com.pl</title>
-    <!-- Cookie banner -->
-    <link rel="stylesheet" id="silktide-consent-manager-css" href="silktide-consent-manager.css">
-    <script src="silktide-consent-manager.js"></script>
-
-    <script>
-        // Inicjalizacja gtag i dataLayer
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        // Konfiguracja banera cookies
-        silktideCookieBannerManager.updateCookieBannerConfig({
-            background: {
-                showBackground: false
-            },
-            cookieIcon: {
-                position: "bottomLeft"
-            },
-            cookieTypes: [
-                {
-                    id: "anonimowa_analiza_ruchu",
-                    name: "Anonimowa analiza ruchu",
-                    description: "<p>Strona używa plików cookie do analizy ruchu za pomocą Google Analytics 4. Twoje dane są anonimowe.</p>",
-                    required: false,
-                    onAccept: function () {
-                        // Ładowanie Google Analytics tylko po uzyskaniu zgody
-                        const script = document.createElement('script');
-                        script.async = true;
-                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-5KSZFXCY2B";
-
-                        // Obsługa błędów podczas ładowania skryptu
-                        script.onerror = function () {
-                            console.error("Nie udało się załadować Google Analytics.");
-                        };
-
-                        document.head.appendChild(script);
-
-                        script.onload = function () {
-                            gtag('js', new Date());
-                            gtag('config', 'G-5KSZFXCY2B');
-                            gtag('consent', 'update', {
-                                analytics_storage: 'granted',
-                            });
-                            dataLayer.push({
-                                'event': 'consent_accepted_anonimowa_analiza_ruchu',
-                            });
-                        };
-                    },
-                    onReject: function () {
-                        // Aktualizacja zgody na przechowywanie danych analitycznych
-                        if (typeof gtag === "function") {
-                            gtag('consent', 'update', {
-                                analytics_storage: 'denied',
-                            });
-                        } else {
-                            console.warn("Google Analytics nie zostało zainicjalizowane.");
-                        }
-                    }
-                }
-            ],
-            text: {
-                banner: {
-                    description: "<p><span style=\"letter-spacing: 0.34px;\">Strona używa plików cookie do analizy ruchu za pomocą Google Analytics 4. Twoje dane są anonimowe.</span><br><br><a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\">Jak Google wykorzystuje dane gromadzone podczas korzystania z witryn i aplikacji</a></p>",
-                    acceptAllButtonText: "Zgoda",
-                    acceptAllButtonAccessibleLabel: "Zaakceptuj cookies",
-                    rejectNonEssentialButtonText: "Odrzuć",
-                    rejectNonEssentialButtonAccessibleLabel: "Odrzuć non-essential",
-                    preferencesButtonText: "Preferencje",
-                    preferencesButtonAccessibleLabel: "Toggle preferences"
-                },
-                preferences: {
-                    title: "Dostosuj preferencje dotyczące plików cookie",
-                    description: "<p>Możesz wybrać opcję nie zezwalania na użycie plików cookie.</p>",
-                    creditLinkText: "Get this banner for free",
-                    creditLinkAccessibleLabel: "Get this banner for free"
-                }
-            },
-            position: {
-                banner: "bottomCenter"
-            }
-        });
-    </script>
 </head>
 
 <body>
@@ -477,5 +394,6 @@
     <script src="index.js"></script>
 
 </body>
+
 
 </html>
